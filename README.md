@@ -52,26 +52,41 @@ Claude Code でこのリポジトリを開き、やりたいことを日本語�
 | [`docs/sns-playbook.md`](docs/sns-playbook.md) | チャネル戦略、投稿の型A〜I、KPI、年間フック |
 | [`docs/catalog-snapshot.md`](docs/catalog-snapshot.md) | 商品ラインの構造とファミリーセット表 |
 | [`docs/findings-2026-08.md`](docs/findings-2026-08.md) | **初期診断：SNSを始める前に潰すべき課題** |
+| [`docs/openlogi-sync-2026-08-30.md`](docs/openlogi-sync-2026-08-30.md) | **OpenLogi × Shopify 在庫照合レポート** |
+| [`docs/tagging.md`](docs/tagging.md) | タグ体系（8軸）と、次に組むべきコレクション |
 | [`docs/templates/`](docs/templates/) | 週次カレンダー / キャンペーン企画書 / 週次レポートの雛形 |
+| [`docs/data/`](docs/data/) | OpenLogi在庫CSV、タグ適用前のバックアップ |
 
 ---
 
+## 現在のフェーズ：売り切り
+
+**新規入荷は基本的にありません。いまある在庫を売り切ることが目的です。**
+そのため「新作を出して認知を積む」通常のブランド運用とは前提が違い、
+チーム全体が「在庫が多く、捌きたいものから露出させる」方針で動きます。
+
 ## まず読むべきもの
 
-**[`docs/findings-2026-08.md`](docs/findings-2026-08.md)** から読んでください。
+**[`docs/openlogi-sync-2026-08-30.md`](docs/openlogi-sync-2026-08-30.md)** →
+**[`docs/findings-2026-08.md`](docs/findings-2026-08.md)** の順で読んでください。
 
-実際のストアデータを確認したところ、SNSで注目を集めても売上に変換されない構造的な課題が
-いくつか見つかっています。特に重要なのは次の3点です。
+実データを確認したところ、SNSで注目を集めても売上に変換されない課題が見つかっています。
 
-1. **「Two of a kind」「Playing Dog」の大人用が非公開・在庫0**
-   — 犬用だけ在庫が残り、sumifの核である「お揃い」が成立していない
-2. **NOIコラボTeeが在庫116点でドラフトのまま**
-   — 実在庫なら即売れる資産。数値の誤りなら分析が全部狂う。実物確認が必要
-3. **2024年以降の商品にタグが未設定**
-   — 自動コレクションが機能せず、SNSからの導線が作れない
+1. **OpenLogiとShopifyの在庫が合っていない** — 照合できた134SKUのうち61件（46%）が不一致。
+   うち57件はShopifyのほうが多く、**在庫がないのに注文が通る状態**。最優先で是正が必要
+2. **「Two of a kind」「Playing Dog」の大人用が非公開・在庫0**
+   — 犬用だけ在庫が残り（64点・16点）、sumifの核である「お揃い」が成立していない
+3. **NOIコラボTeeの在庫116点はOpenLogiに存在しない**
+   — 実在庫でない可能性が高い。かつSKUがBrittany Spanielの体系を流用しており事故のもと
 
 在庫が潤沢で3者が揃っている **Brittany Spaniel / RinTinTin / British Dogs** が
 いますぐ推せるシリーズです。
+
+## 完了済み
+
+- ✅ **タグ体系の整備**（2026-08-30）— ACTIVE23商品に8軸のタグを適用。
+  シリーズ / 対象 / アイテム / 素材 / 季節 / セット / セット状態 / アーティスト / 販売方針。
+  詳細は [`docs/tagging.md`](docs/tagging.md)
 
 ---
 
