@@ -55,6 +55,7 @@ Claude Code でこのリポジトリを開き、やりたいことを日本語�
 | [`docs/openlogi-sync-2026-08-30.md`](docs/openlogi-sync-2026-08-30.md) | **OpenLogi × Shopify 在庫照合レポート** |
 | [`docs/tagging.md`](docs/tagging.md) | タグ体系（8軸）と、次に組むべきコレクション |
 | [`docs/creative-assets-audit-2026-08-30.md`](docs/creative-assets-audit-2026-08-30.md) | **既存画像166点の棚卸し。何が使えて何が足りないか** |
+| [`docs/instagram-audit-2026-08-30.md`](docs/instagram-audit-2026-08-30.md) | **Instagram診断（2,856フォロワー）と今日できる3つの改善** |
 | [`docs/templates/`](docs/templates/) | 週次カレンダー / キャンペーン企画書 / 週次レポートの雛形 |
 | [`docs/data/`](docs/data/) | OpenLogi在庫CSV、タグ適用前のバックアップ |
 
