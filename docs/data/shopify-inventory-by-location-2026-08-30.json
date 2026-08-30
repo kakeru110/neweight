@@ -1,0 +1,657 @@
+{
+ "eu22-A100-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 12
+ },
+ "eu22-K104-110-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D108-XS-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-D108-XS-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-D108-S-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D108-S-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-D108-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D108-M-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-D108-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D108-L-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-A112-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-K114-110-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D116-XS-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-D116-S-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D116-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D116-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A102-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-K106-110-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D110-XS-off": {
+  "原田家": 5,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-A101-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-K105-110-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 14
+ },
+ "eu22-D111-XS-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-A113-M-tera": {
+  "原田家": 0,
+  "Open Logi 倉庫": 14
+ },
+ "eu22-K115-110-tera": {
+  "原田家": 0,
+  "Open Logi 倉庫": 2
+ },
+ "eu22-D117-XS-tera": {
+  "原田家": 4,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-A103-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-K107-110-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 13
+ },
+ "eu22-K107-110-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 14
+ },
+ "eu22-K107-110-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-K107-110-gr": {
+  "原田家": 0,
+  "Open Logi 倉庫": 12
+ },
+ "eu22-K107-120-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-K107-120-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-K107-120-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-K107-120-gr": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-K107-130-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-K107-130-sumi": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-K107-130-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 7
+ },
+ "eu22-K107-130-gr": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D109-XS-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-Z118": {
+  "原田家": 0,
+  "鎌倉": 0,
+  "高輪": 0
+ },
+ "eu22-A123-M-mlt": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-K124-110-off": {
+  "原田家": 1,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D125-XS-mlt": {
+  "原田家": 5,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-A119-M-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A120-M-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D121-XS-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D122-XS-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-tentbag-wht": {
+  "原田家": 0,
+  "鎌倉": 0,
+  "高輪": 0
+ },
+ "eu22-tentbag-cha2": {
+  "原田家": 0
+ },
+ "eu22-A100-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A100-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 16
+ },
+ "eu22-A100-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-K104-120-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-K104-130-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-K104-110-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-K104-120-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-K104-130-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-A112-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-K114-120-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-K114-130-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A102-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 13
+ },
+ "eu22-A102-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 2
+ },
+ "eu22-A102-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-A102-M-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 13
+ },
+ "eu22-A102-L-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D110-S-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D110-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D110-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-D110-XS-sum": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D110-S-sum": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D110-M-sum": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D110-L-sum": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D110-XS-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-D110-S-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D110-M-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D110-L-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-A101-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 2
+ },
+ "eu22-A101-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-A101-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A101-M-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-A101-L-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 10
+ },
+ "eu22-K105-120-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-K105-130-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-K105-110-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-K105-120-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-K105-130-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-K105-110-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-K105-120-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-K105-130-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D111-S-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D111-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D111-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D111-XS-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D111-S-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D111-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-D111-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D111-XS-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 6
+ },
+ "eu22-D111-S-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D111-M-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D111-L-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D117-S-tera": {
+  "原田家": 0,
+  "Open Logi 倉庫": 7
+ },
+ "eu22-D117-M-tera": {
+  "原田家": 0,
+  "Open Logi 倉庫": 15
+ },
+ "eu22-D117-L-tera": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D109-S-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 13
+ },
+ "eu22-D109-M-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 11
+ },
+ "eu22-D109-L-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D109-XS-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-D109-S-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D109-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D109-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D109-XS-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 1
+ },
+ "eu22-D109-S-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 7
+ },
+ "eu22-D109-M-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-D109-L-pin": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D109-XS-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D109-S-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D109-M-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D109-L-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A123-L-mlt": {
+  "原田家": 0,
+  "Open Logi 倉庫": 12
+ },
+ "eu22-K124-120-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-K124-130-off": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D125-S-mlt": {
+  "原田家": 0,
+  "Open Logi 倉庫": 7
+ },
+ "eu22-D125-M-mlt": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D125-L-mlt": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A120-L-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A120-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-A120-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D121-XS-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D121-S-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 2
+ },
+ "eu22-D121-S-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D121-M-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D121-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 3
+ },
+ "eu22-D121-L-grn": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D121-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 0
+ },
+ "eu22-D122-XS-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 13
+ },
+ "eu22-D122-S-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 9
+ },
+ "eu22-D122-S-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 4
+ },
+ "eu22-D122-M-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D122-M-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D122-L-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 8
+ },
+ "eu22-D122-L-blk": {
+  "原田家": 0,
+  "Open Logi 倉庫": 5
+ },
+ "eu22-A113-L-tera": {
+  "Open Logi 倉庫": 24,
+  "鎌倉": 0,
+  "原田家": 0,
+  "高輪": 0
+ },
+ "eu22-A103-M-blk": {
+  "Open Logi 倉庫": 6,
+  "原田家": 0
+ },
+ "eu22-A103-M-pin": {
+  "Open Logi 倉庫": 8,
+  "原田家": 0
+ },
+ "eu22-A103-M-grn": {
+  "Open Logi 倉庫": 9,
+  "原田家": 0
+ },
+ "eu22-A103-L-off": {
+  "Open Logi 倉庫": 14,
+  "原田家": 0
+ },
+ "eu22-A103-L-blk": {
+  "Open Logi 倉庫": 7,
+  "原田家": 0
+ },
+ "eu22-A103-L-pin": {
+  "Open Logi 倉庫": 15,
+  "原田家": 0
+ },
+ "eu22-A103-L-grn": {
+  "Open Logi 倉庫": 11,
+  "原田家": 0
+ },
+ "eu22-K115-120-tera": {
+  "Open Logi 倉庫": 8,
+  "原田家": 0
+ },
+ "eu22-K115-130-tera": {
+  "Open Logi 倉庫": 4,
+  "原田家": 0
+ },
+ "eu22-K106-110-blk": {
+  "Open Logi 倉庫": 8,
+  "原田家": 0
+ },
+ "eu22-K106-110-pin": {
+  "Open Logi 倉庫": 8,
+  "原田家": 0
+ },
+ "eu22-K106-120-off": {
+  "Open Logi 倉庫": 5,
+  "原田家": 0
+ },
+ "eu22-K106-120-blk": {
+  "Open Logi 倉庫": 5,
+  "原田家": 0
+ },
+ "eu22-K106-120-pin": {
+  "Open Logi 倉庫": 4,
+  "原田家": 0
+ },
+ "eu22-K106-130-off": {
+  "Open Logi 倉庫": 4,
+  "原田家": 0
+ },
+ "eu22-K106-130-blk": {
+  "Open Logi 倉庫": 3,
+  "原田家": 0
+ },
+ "eu22-K106-130-pin": {
+  "Open Logi 倉庫": 5,
+  "原田家": 0
+ },
+ "eu26-A200-M-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 29
+ },
+ "eu22-A103-M-gry": {
+  "原田家": 0,
+  "Open Logi 倉庫": 28
+ },
+ "eu22-A103-L-wht": {
+  "原田家": 0,
+  "Open Logi 倉庫": 30
+ },
+ "eu22-A103-L-gry": {
+  "原田家": 0,
+  "Open Logi 倉庫": 29
+ }
+}
