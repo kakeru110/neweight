@@ -14,19 +14,36 @@ SNSで集めた注目を**売上に変換する受け皿**を整えるのが仕�
 3. **必ず Shopify MCP で最新の実データを取得する。** スナップショットは古い前提で扱う
 4. `docs/brand-context.md` の表記ルールを読む（商品説明文を書く場合）
 
-## ⚠️ 在庫数を鵜呑みにしない
+## 🔴 在庫の大原則（これを外すと全部間違う）
 
-**Shopifyの在庫数はOpenLogiの実在庫と一致していない**（2026-08-30時点で照合134件中61件が不一致、
-うち57件はShopifyのほうが多い＝在庫がないのに売れる状態）。
+> **Shopifyで売っていいのは `Open Logi 倉庫` ロケーションにある在庫だけ。**
+> `原田家` `鎌倉` `高輪` にも現物はあるが出荷できないので販売数に入れない。
+> それらを売る場合は先にOpenLogiへ入庫してから。
 
+### 販売可能在庫の正しい取り方
+
+**`productVariant.inventoryQuantity` を使ってはいけない。** 全ロケーションの合計が返るため、
+実際に売れる数より多く出る（例: `eu22-D110-XS-off` は 11 と返るが、売れるのは倉庫の6点だけ）。
+
+必ずこう取ること:
+
+```graphql
+inventoryItem {
+  inventoryLevels(first: 6) {
+    edges { node {
+      location { name }
+      quantities(names: ["available"]) { quantity }
+    } }
+  }
+}
+```
+→ `location.name == "Open Logi 倉庫"` の `available` だけを使う。
+
+### さらにその数字もOpenLogiとズレている
+
+2026-08-30時点で139SKU中61件が不一致、**91点が「実在しないのに売れる」状態**。
 在庫が判断に効く場面では、Shopifyの数字だけで断定せず、
-ユーザーにOpenLogiの最新在庫リスト（配送可在庫のCSV/Excel）を求めてから答えること。
-
-**さらにShopifyにはロケーションが4つある**（`Open Logi 倉庫` / `原田家` / `鎌倉` / `高輪`）。
-`productVariant.inventoryQuantity` は**全ロケーションの合計**なので、
-OpenLogiと突合するときは必ず `Open Logi 倉庫` ロケーションの数量だけを取り出すこと
-（`inventoryItem.inventoryLevels` → `location.name` で絞る）。
-実際に出荷できるのは倉庫の在庫だけ。
+ユーザーにOpenLogiの最新の配送可在庫リスト（CSV/Excel）を求めてから答えること。
 
 ## 現在のフェーズは「売り切り」
 

@@ -9,8 +9,23 @@ SNS運用を起点に売るための「AIエージェントチーム」です。
 - **言語**: 出力は原則すべて日本語。ブランド名 `sumif` は小文字表記（文頭でも `Sumif` にしない）。
 - **通貨・税**: JPY、価格は税込表記。ストアのタイムゾーンはJST。
 - **ストア**: Shopify `sumif_official` / プラン Basic / ドメイン sumifofficial.com
-- **物流**: OpenLogi（外部倉庫）。**Shopifyの在庫数とOpenLogiの実在庫はズレている**
-  （2026-08-30時点で46%不一致）。在庫を語る前に `docs/openlogi-sync-2026-08-30.md` を読むこと。
+- **物流**: OpenLogi（外部倉庫、柏市）。
+
+## 🔴 在庫の大原則（最優先ルール）
+
+> **Shopifyで売っていいのは `Open Logi 倉庫` ロケーションにある在庫だけ。**
+>
+> `原田家` `鎌倉` `高輪` にも現物はあるが、**出荷できないので販売数に入れない。**
+> それらを売る場合は、**先にOpenLogiへ入庫してから**売る。
+
+**`productVariant.inventoryQuantity` は全ロケーションの合計なので、販売可能在庫として使ってはいけない。**
+必ず `inventoryItem.inventoryLevels` を辿り、`location.name == "Open Logi 倉庫"` の
+`available` を取ること。そのまま使うと最大で実際の2倍近い数字になる。
+
+さらに **その `Open Logi 倉庫` の数字自体もOpenLogiの実在庫とズレている**
+（2026-08-30時点で139SKU中61件が不一致、91点が「実在しないのに売れる」状態）。
+重要な判断ではOpenLogiの配送可在庫リストと突合すること。
+詳細は `docs/openlogi-sync-2026-08-30.md`。
 
 ## 🔴 現在のフェーズ: 売り切り
 
