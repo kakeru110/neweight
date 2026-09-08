@@ -56,6 +56,7 @@ Claude Code でこのリポジトリを開き、やりたいことを日本語�
 | [`docs/tagging.md`](docs/tagging.md) | タグ体系（8軸）と、次に組むべきコレクション |
 | [`docs/creative-assets-audit-2026-08-30.md`](docs/creative-assets-audit-2026-08-30.md) | **既存画像166点の棚卸し。何が使えて何が足りないか** |
 | [`docs/instagram-audit-2026-08-30.md`](docs/instagram-audit-2026-08-30.md) | **Instagram診断（2,856フォロワー）と今日できる3つの改善** |
+| [`docs/translation-fix-2026-09-08.md`](docs/translation-fix-2026-09-08.md) | 英語翻訳の修正ログ。**別商品の翻訳が入っている5件が未対応** |
 | [`docs/overseas-2026-09-08.md`](docs/overseas-2026-09-08.md) | 🔴 **海外販売の診断。設定は完成済みだが送料が赤字構造** |
 | [`docs/sales-reality-2026-09-06.md`](docs/sales-reality-2026-09-06.md) | 🔴 **売上の実態。3ヶ月半で5件。戦略の重心を企画へ移す根拠** |
 | [`docs/calendar/2026-09.md`](docs/calendar/2026-09.md) | **9月のコンテンツカレンダー** |
