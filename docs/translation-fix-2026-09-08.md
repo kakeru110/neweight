@@ -25,7 +25,51 @@
 
 ---
 
-## 🔴 未修正：英語翻訳が「別商品のもの」になっている（9件）
+## ✅ 対応済み：英語翻訳が「別商品のもの」になっていた問題（9件・2026-09-09）
+
+**方針B（書き直す）で対応完了。** 日本語原文から正しい英語を新規に作成し、
+`title` / `body_html` / `meta_title` を差し替えた。
+
+| 日本語（実際の商品） | 修正後の英語タイトル | 状態 |
+|---|---|---|
+| Various dogs Long Sleeve Shirts(アダルト) | Various dogs Long Sleeve Shirt (Adult / Unisex) | ACTIVE |
+| Various dogs Long Sleeve Shirts For Kids | Various dogs Long Sleeve Shirt for Kids | ACTIVE |
+| Various dogs Shirts For Dog | Various dogs Shirt for Dogs | ACTIVE |
+| Playing Dog Sweat For Dog | Playing Dog Sweatshirt for Dogs | ACTIVE |
+| Two of a kind Sweat For Dog | Two of a kind Sweatshirt for Dogs | ACTIVE |
+| Playing Dog Sweat（アダルト） | Playing Dog Sweatshirt (Adult / Unisex) | DRAFT |
+| Two of a kind Sweat（アダルト） | Two of a kind Sweatshirt (Adult / Unisex) | DRAFT |
+| Sumif × NOI Exclusive Order Tee | Sumif × NOI Exclusive Order Tee | DRAFT |
+| Sumif×The TENT Drawstring Bag | **翻訳を削除**（下記） | DRAFT |
+
+### 書き直しの方針
+
+- 日本語原文の**素材・サイズ・着用モデル（犬種と体重）を1つも落とさず**英訳
+- 作家名は正しい人物を記載（Various dogs = Nelson Mirei / Playing Dog = norahi /
+  Two of a kind・NOI Tee = NOI）
+- legacy な `data-mce-fragment` だらけのHTMLをやめ、
+  `Description / Material / Size / Sumif / Art` の清潔な構造に統一
+- NOI Tee は受注期間が終了しているため、その事実を明記
+
+### Drawstring Bag だけ「削除」にした理由
+
+**日本語の商品説明が空だった**（`descriptionHtml` は `<meta charset="UTF-8">` のみ）。
+翻訳元が存在しないのに英語だけマルチマットの説明文が入っていた状態。
+
+新しい英語を書くには素材・サイズ等の事実が必要だが、**日本語側に情報がないため
+捏造せずに削除**した。英語では日本語原文（＝空）が表示される。
+
+> **要対応**: この商品は日本語の説明文自体が空。公開するなら**まず日本語を書く**必要がある。
+
+### 検証
+
+全34商品の英語翻訳を再取得し、
+- 9件すべてで日本語商品と英語タイトルが一致することを確認
+- `quantity` の誤訳は **0件**
+
+---
+
+## （旧記載）未修正だった内容
 
 norahiの調査中に、**より深刻な事故**が見つかりました。
 `quantity：` が残っている6件は、すべてこの問題に該当します。
@@ -72,11 +116,11 @@ norahiの調査中に、**より深刻な事故**が見つかりました。
 
 ---
 
-## 参考：他に見つかっている英語の不備
+## 🟡 残っている英語の不備（未対応）
 
 | 箇所 | 内容 |
 |---|---|
-| British Dogs系 8商品 | 作家紹介が `Active as a ter.` で文が壊れている |
+| **British Dogs系 8商品** | 作家紹介が `Active as a ter.` で文が壊れている（検証で8件確認） |
 | コレクション「ホームページ」 | `home page` と直訳されている |
 | 全体 | 機械翻訳ベースで、`100% polyester%` のような表記ゆれが残る |
 
