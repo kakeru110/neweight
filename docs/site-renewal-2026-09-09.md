@@ -36,7 +36,79 @@
 
 ---
 
-## 🔴 提案1：並びの軸を「対象」から「シリーズ」へ変える
+## ✅ 実施済み（2026-09-09）：提案1 ナビをシリーズ軸に変更
+
+### やったこと
+
+**1. シリーズコレクション5件をオンラインストアに公開**
+
+調査して分かったが、**5件とも `resourcePublications` が空＝どのチャネルにも未公開**だった。
+コレクション自体は存在してURLも生きていたが、公開されていないので
+ナビに入れてもお客には見えない状態。まずこれを公開した。
+
+| コレクション | handle | 公開先 |
+|---|---|---|
+| British Dogs | `/collections/british-dogs` | オンラインストア |
+| RinTinTin | `/collections/rintintin` | オンラインストア |
+| Flanders | `/collections/flanders` | オンラインストア |
+| Brittany Spaniel | `/collections/brittany-spaniel` | オンラインストア |
+| Various dogs | `/collections/various-dogs` | オンラインストア |
+
+> POS / Facebook & Instagram / Google & YouTube / 購入ボタンには**あえて公開していない**。
+> サイトのナビに必要なのはオンラインストアだけで、他チャネルはそれぞれ
+> 別のカタログに影響するため。必要なら後から追加できる。
+
+**2. メインメニューをシリーズ軸に組み替え**
+
+変更前（対象で分かれていた）:
+```
+All Items / New / Adult▾ / Kids▾ / Dog▾ / About Sumif▾ / News▾ / Guide▾
+```
+
+変更後（シリーズが第一階層、対象は副軸）:
+```
+British Dogs
+RinTinTin
+Flanders
+Brittany Spaniel
+Various dogs
+All Items ▾ ── All Items / New / Adult / Kids / Dog
+About Sumif ▾ ── About Sumif / Artist / Animal Donation / Styling Book
+News ▾ ── News / Sales Shop
+Guide ▾ ── FAQ / Shipping Policy / Payment / Refund
+```
+
+Adult / Kids / Dog は消していない。`All Items` のドロップダウンに移した。
+Styling Book は Adult/Kids/Dog の下から外れたので、About Sumif の下に残してある。
+
+> 変更前の構造は `docs/data/menu-backup-2026-09-09.json` に保存済み。
+
+### 検証（実際のサイトで確認）
+
+5シリーズすべてのページを開いて、**大人・キッズ・ドッグが1ページに並ぶこと**を確認した。
+
+| シリーズ | 表示商品数 | 内容 |
+|---|---:|---|
+| British Dogs | 6 | ロンT(大人/子)、ロンシャツ(大人/子)、タンク(犬)、シャツ(犬) |
+| RinTinTin | 3 | 半袖T(大人/子)、タンク(犬) |
+| Flanders | 6 | ロンT(大人/子)、半袖シャツ(大人/子)、タンク(犬)、シャツ(犬) |
+| **Brittany Spaniel** | 3 | 半袖T(大人/子)、タンク(犬) ← 在庫217点、4色 |
+| Various dogs | 3 | ロンシャツ(大人/子)、シャツ(犬) |
+
+ナビも実サイトで9項目・ドロップダウン込みで正しく出ていることを確認。
+
+### この変更で残った穴
+
+**Two of a kind Sweat(犬64点) と Playing Dog Sweat(犬16点) の計80点が、シリーズ軸の外にいる。**
+どちらも犬専用のスウェットで、大人・子供用がないため「家族でおそろい」の
+シリーズページを作れない。いまは `All Items ▾ > Dog` からしか辿れない。
+
+全在庫827点の**約10%**。トップページで別枠（「愛犬だけの1着」など）を
+作るか、Dog を第一階層に戻すかの判断が必要。
+
+---
+
+## ~~🔴 提案1~~：並びの軸を「対象」から「シリーズ」へ変える（↑で実施済み）
 
 **これが一番効く。しかも無料で今日できる。**
 
@@ -195,7 +267,7 @@ British Dogs / RinTinTin / Flanders / Brittany Spaniel / Various dogs
 
 | 順 | やること | 工数 | 効果 |
 |---|---|---|---|
-| 1 | ナビをシリーズ軸に変更 | 30分 | 🔴 大 |
+| ~~1~~ | ~~ナビをシリーズ軸に変更~~ ✅ **2026-09-09 実施済み** | 済 | 🔴 大 |
 | 2 | コレクションを在庫あり順に / 在庫0を下ろす | 1時間 | 🔴 大 |
 | 3 | 商品ページに「おそろい導線」 | 半日 | 🔴 大 |
 | 4 | コレクション19→8に整理 | 半日 | 中 |

@@ -1,0 +1,41 @@
+{
+  "_note": "ナビをシリーズ軸に変更する前の main-menu 構造のバックアップ (2026-09-09)",
+  "menu": {
+    "id": "gid://shopify/Menu/193025736942",
+    "handle": "main-menu",
+    "title": "Menu",
+    "items": [
+      {"title": "All Items", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396971999470"},
+      {"title": "New", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/412630253806"},
+      {"title": "Adult", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512985326", "items": [
+        {"title": "Adult", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512985326"},
+        {"title": "Styling Book", "type": "HTTP", "url": "https://sumifofficial.com/pages/styling-book-for-adult"}
+      ]},
+      {"title": "Kids", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512952558", "items": [
+        {"title": "Kids", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512952558"},
+        {"title": "Styling Book", "type": "HTTP", "url": "https://sumifofficial.com/pages/styling-book-for-kids"}
+      ]},
+      {"title": "Dog", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512919790", "items": [
+        {"title": "Dog", "type": "COLLECTION", "resourceId": "gid://shopify/Collection/396512919790"},
+        {"title": "Styling Book", "type": "HTTP", "url": "https://sumifofficial.com/pages/styling-book-dogs"}
+      ]},
+      {"title": "About Sumif", "type": "PAGE", "resourceId": "gid://shopify/Page/98619654382", "items": [
+        {"title": "About Sumif", "type": "PAGE", "resourceId": "gid://shopify/Page/98619654382"},
+        {"title": "Artist", "type": "HTTP", "url": "https://sumifofficial.com/pages/test"},
+        {"title": "Animal Donation", "type": "PAGE", "resourceId": "gid://shopify/Page/98619785454"},
+        {"title": "Styling Book", "type": "HTTP", "url": "https://sumifofficial.com/pages/styling-book-for-adult"}
+      ]},
+      {"title": "News", "type": "BLOG", "resourceId": "gid://shopify/Blog/82802016494", "items": [
+        {"title": "News", "type": "BLOG", "resourceId": "gid://shopify/Blog/82802016494"},
+        {"title": "Sales Shop", "type": "PAGE", "resourceId": "gid://shopify/Page/102363693294"}
+      ]},
+      {"title": "Guide", "type": "SHOP_POLICY", "resourceId": "gid://shopify/ShopPolicy/25591447790", "items": [
+        {"title": "FAQ", "type": "HTTP", "url": "https://sumifofficial.com/apps/frequently-asked-questions?faq-section-id=75051&faq-article-id=338099"},
+        {"title": "Shipping Policy", "type": "SHOP_POLICY", "resourceId": "gid://shopify/ShopPolicy/25591447790"},
+        {"title": "Payment", "type": "PAGE", "resourceId": "gid://shopify/Page/101783044334"},
+        {"title": "Refund", "type": "SHOP_POLICY", "resourceId": "gid://shopify/ShopPolicy/25591349486"}
+      ]}
+    ]
+  },
+  "series_collections_before": "5件とも resourcePublications が空 = どのチャネルにも未公開だった"
+}
