@@ -1,0 +1,81 @@
+{%- comment -%}
+  商品カードの色チップ（2026-09-23 追加 / sumif）
+  product-grid-item.liquid から呼ばれる。Liquidだけで完結しており、JavaScriptに依存しない。
+  色が2色以上ある商品だけ表示する。売り切れの色は斜線。
+  色コードは snippets/sumif-swatches.liquid の一覧と揃えること。
+{%- endcomment -%}
+
+{%- assign sw_product = featured -%}
+{%- if sw_product == blank -%}{%- assign sw_product = product -%}{%- endif -%}
+
+{%- if sw_product.variants.size > 1 -%}
+  {%- assign sw_ci = -1 -%}
+  {%- for sw_opt in sw_product.options -%}
+    {%- assign sw_opt_lc = sw_opt | downcase -%}
+    {%- if sw_opt == '色' or sw_opt == 'カラー' or sw_opt_lc == 'color' or sw_opt_lc == 'colour' -%}
+      {%- assign sw_ci = forloop.index0 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if sw_ci >= 0 -%}
+    {%- assign sw_names = '' -%}
+    {%- for sw_v in sw_product.variants -%}
+      {%- assign sw_n = sw_v.options[sw_ci] -%}
+      {%- if sw_n != blank -%}
+        {%- assign sw_wrapped = '|' | append: sw_names | append: '|' -%}
+        {%- assign sw_probe = '|' | append: sw_n | append: '|' -%}
+        {%- unless sw_wrapped contains sw_probe -%}
+          {%- if sw_names == '' -%}
+            {%- assign sw_names = sw_n -%}
+          {%- else -%}
+            {%- assign sw_names = sw_names | append: '|' | append: sw_n -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign sw_list = sw_names | split: '|' -%}
+    {%- if sw_list.size > 1 -%}
+      {%- assign sw_map_names = 'オフホワイト,スミクロ,ピンク,グリーン,テラコッタ,ホワイト,ブラック' | split: ',' -%}
+      {%- assign sw_map_hex = '#f8f7ed,#51545a,#e09ba5,#a4cc74,#d68e68,#ffffff,#1a1a1a' | split: ',' -%}
+
+      <ul class="sumif-sw">
+        {%- for sw_c in sw_list -%}
+          {%- assign sw_pick_id = 0 -%}
+          {%- assign sw_first_id = 0 -%}
+          {%- assign sw_img = '' -%}
+          {%- for sw_v in sw_product.variants -%}
+            {%- if sw_v.options[sw_ci] == sw_c -%}
+              {%- if sw_first_id == 0 -%}{%- assign sw_first_id = sw_v.id -%}{%- endif -%}
+              {%- if sw_img == '' and sw_v.featured_image != blank -%}
+                {%- assign sw_img = sw_v.featured_image | img_url: '80x80', crop: 'center' -%}
+              {%- endif -%}
+              {%- if sw_v.available and sw_pick_id == 0 -%}{%- assign sw_pick_id = sw_v.id -%}{%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- assign sw_hex = '' -%}
+          {%- for sw_mn in sw_map_names -%}
+            {%- if sw_mn == sw_c -%}{%- assign sw_hex = sw_map_hex[forloop.index0] -%}{%- endif -%}
+          {%- endfor -%}
+
+          {%- if sw_hex != '' or sw_img != '' -%}
+            {%- if sw_pick_id == 0 -%}
+              <li class="sumif-sw__item sumif-sw__item--out">
+                <span class="sumif-sw__dot" title="{{ sw_c }}（売り切れ）" aria-label="{{ sw_c }}（売り切れ）"
+                  style="{% if sw_hex != '' %}background:{{ sw_hex }}{% else %}background-image:url({{ sw_img }}){% endif %}"></span>
+              </li>
+            {%- else -%}
+              <li class="sumif-sw__item">
+                <a href="{{ sw_product.url }}?variant={{ sw_pick_id }}" title="{{ sw_c }}" aria-label="{{ sw_c }}">
+                  <span class="sumif-sw__dot"
+                    style="{% if sw_hex != '' %}background:{{ sw_hex }}{% else %}background-image:url({{ sw_img }}){% endif %}"></span>
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}

@@ -1,0 +1,191 @@
+{%- comment -%}
+  sumif カラースウォッチ 共通CSS + 商品ページ用スクリプト（2026-09-23 追加）
+
+  旧 Globo Color Swatch アプリがアンインストールされ、テーマ内に残骸だけが残っていた。
+  残骸のJSは何も描画しないうえ、自分のコンテナ要素をDOMから削除する動きをしていたため、
+  layout/theme.liquid の globo.swatch.script の読み込みごと外し、同等の機能をここに実装した。
+  アプリ不要・月額不要。
+
+  ・商品カードの色の丸 … snippets/sumif-swatch-card.liquid（Liquidのみ / JS不要）
+  ・商品ページの色チップ … このファイルのスクリプト
+
+  商品ページはテーマが1つの<select>を出し、Shopify標準の option_selection.js が
+  実行時に色・サイズのセレクタへ分割する作りなので、サーバー側では組み立てられない。
+  そのため分割が終わるのを待ってから色チップに置き換えている。
+  組み立てに成功したあとで初めて元のプルダウンを隠すので、途中で失敗しても買えなくならない。
+
+  色コードのうち オフホワイト/スミクロ/ピンク/グリーン/テラコッタ の5色は、
+  旧Globoアプリにストアオーナーが登録していた実データ。
+  ホワイト/ブラックの2色はGlobo側に登録がなかったため名前どおりの値を入れている。
+  変更するときは、このファイルと sumif-swatch-card.liquid の両方を直すこと。
+{%- endcomment -%}
+
+<style>
+  .sumif-sw{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;padding:0;list-style:none}
+  .text-center .sumif-sw{justify-content:center}
+  .sumif-sw__item{display:block;line-height:0}
+  .sumif-sw__dot{display:block;width:15px;height:15px;border-radius:50%;
+    border:1px solid rgba(0,0,0,.22);box-sizing:border-box;background-size:cover;
+    background-position:center;transition:transform .12s ease}
+  .sumif-sw__item:hover .sumif-sw__dot{transform:scale(1.18)}
+  .sumif-sw__item--out .sumif-sw__dot{opacity:.35;position:relative;overflow:hidden}
+  .sumif-sw__item--out .sumif-sw__dot:after{content:"";position:absolute;left:-3px;right:-3px;top:50%;
+    height:1px;background:rgba(0,0,0,.6);transform:rotate(-45deg)}
+
+  .sumif-pick{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+  .sumif-pick li{margin:0;padding:0;list-style:none}
+  .sumif-pick__btn{display:flex;align-items:center;gap:7px;padding:5px 13px 5px 6px;
+    background:none;border:1px solid rgba(0,0,0,.18);border-radius:999px;cursor:pointer;
+    font:inherit;font-size:13px;color:inherit;line-height:1.6}
+  .sumif-pick__btn:hover{border-color:rgba(0,0,0,.55)}
+  .sumif-pick__btn[aria-pressed="true"]{border-color:#000;box-shadow:inset 0 0 0 1px #000}
+  .sumif-pick__chip{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.22);
+    background-size:cover;background-position:center;flex:0 0 auto;position:relative;overflow:hidden}
+  .sumif-pick__btn--out{opacity:.45}
+  .sumif-pick__btn--out .sumif-pick__chip:after{content:"";position:absolute;left:-3px;right:-3px;top:50%;
+    height:1px;background:rgba(0,0,0,.65);transform:rotate(-45deg)}
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var COLORS = {
+    "オフホワイト": "#f8f7ed",
+    "スミクロ":     "#51545a",
+    "ピンク":       "#e09ba5",
+    "グリーン":     "#a4cc74",
+    "テラコッタ":   "#d68e68",
+    "ホワイト":     "#ffffff",
+    "ブラック":     "#1a1a1a"
+  };
+
+  function isColorOption(name) {
+    var n = String(name == null ? "" : name).trim();
+    return n === "色" || n === "カラー" ||
+           n.toLowerCase() === "color" || n.toLowerCase() === "colour";
+  }
+
+  function colorOptionIndex(options) {
+    if (!options || !options.length) return -1;
+    for (var i = 0; i < options.length; i++) {
+      var n = options[i];
+      if (n && typeof n === "object") n = n.name;
+      if (isColorOption(n)) return i;
+    }
+    return -1;
+  }
+
+  function collectColors(product, idx) {
+    var seen = {}, out = [], key = "option" + (idx + 1);
+    (product.variants || []).forEach(function (v) {
+      var name = v[key];
+      if (!name) return;
+      if (!seen[name]) { seen[name] = { name: name, available: false, image: null }; out.push(seen[name]); }
+      if (v.available) seen[name].available = true;
+      if (!seen[name].image && v.featured_image && v.featured_image.src) seen[name].image = v.featured_image.src;
+    });
+    return out;
+  }
+
+  function paint(el, entry) {
+    var hex = COLORS[entry.name];
+    if (hex) { el.style.background = hex; return true; }
+    if (entry.image) {
+      el.style.backgroundImage = "url(" + entry.image.replace(/(\.[a-z]+)(\?|$)/i, "_80x$1$2") + ")";
+      return true;
+    }
+    return false;
+  }
+
+  // 戻り値 true = これ以上待つ必要なし
+  function build() {
+    var json = document.querySelector('[id^="ProductJson-"]');
+    if (!json) return true;                       // 商品ページではない
+
+    var product;
+    try { product = JSON.parse(json.textContent); } catch (e) { return true; }
+
+    var idx = colorOptionIndex(product.options);
+    if (idx === -1) return true;                  // 色オプションがない商品
+
+    var colors = collectColors(product, idx);
+    if (colors.length < 2) return true;           // 1色だけなら置き換えない
+
+    var selects = document.querySelectorAll(".single-option-selector");
+    if (!selects.length) return false;            // option_selection.js をまだ待つ
+
+    var select = selects[idx];
+    if (!select) return true;
+
+    var wrapper = select.parentNode;
+    if (!wrapper || wrapper.querySelector(".sumif-pick")) return true;
+
+    var ul = document.createElement("ul");
+    ul.className = "sumif-pick";
+    var buttons = [];
+
+    function sync() {
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-color") === select.value ? "true" : "false");
+      });
+    }
+
+    colors.forEach(function (c) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "sumif-pick__btn" + (c.available ? "" : " sumif-pick__btn--out");
+      btn.setAttribute("data-color", c.name);
+      btn.setAttribute("aria-pressed", select.value === c.name ? "true" : "false");
+
+      var chip = document.createElement("span");
+      chip.className = "sumif-pick__chip";
+      paint(chip, c);
+
+      var label = document.createElement("span");
+      label.textContent = c.available ? c.name : c.name + "（売り切れ）";
+
+      btn.appendChild(chip);
+      btn.appendChild(label);
+      btn.addEventListener("click", function () {
+        select.value = c.name;
+        // jQuery の trigger だけでは addEventListener 側に届かず、
+        // 逆に素の dispatchEvent だけでは jQuery 側に届かないので両方投げる。
+        // 同じ値を2回選ぶだけなので二重に処理されても実害はない。
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+        if (window.jQuery) { window.jQuery(select).trigger("change"); }
+        sync();
+      });
+
+      var li = document.createElement("li");
+      li.appendChild(btn);
+      ul.appendChild(li);
+      buttons.push(btn);
+    });
+
+    if (!buttons.length) return true;
+
+    wrapper.insertBefore(ul, select);
+    select.style.display = "none";                // 組み立て成功後にだけ隠す
+
+    select.addEventListener("change", sync);
+    sync();
+    return true;
+  }
+
+  function run() {
+    var tries = 0;
+    (function attempt() {
+      var done = true;
+      try { done = build(); } catch (e) { done = true; }
+      if (!done && ++tries < 40) setTimeout(attempt, 100);   // 最大4秒
+    })();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
+})();
+</script>
