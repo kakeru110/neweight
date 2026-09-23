@@ -1,0 +1,19 @@
+{
+  "_note": "オプション順序を 色→サイズ に統一する前の状態 (2026-09-23)。戻すときはこの順序でproductOptionsReorderを実行する。",
+  "統一後": ["色", "サイズ"],
+  "変更した6商品（変更前は サイズ→色）": [
+    {"id": "gid://shopify/Product/7461676581102", "title": "RinTinTin Short Sleeve Tee For Kids（キッズ）", "before": ["サイズ", "色"]},
+    {"id": "gid://shopify/Product/7461721309422", "title": "Flanders Short Sleeve Shirts（アダルト・ユニセックス）", "before": ["サイズ", "色"]},
+    {"id": "gid://shopify/Product/7461723504878", "title": "Flanders Short Sleeve Shirts For Kids（キッズ）", "before": ["サイズ", "色"]},
+    {"id": "gid://shopify/Product/7461727699182", "title": "Brittany Spaniel Short Sleeve Tee(アダルト-ユニセックス)", "before": ["サイズ", "色"]},
+    {"id": "gid://shopify/Product/7461864341742", "title": "Brittany Spaniel Short Sleeve Tee For Kids（キッズ）", "before": ["サイズ", "色"]},
+    {"id": "gid://shopify/Product/7952946987246", "title": "Two of a kind Sweat For Dog（ドッグ）", "before": ["サイズ", "色"]}
+  ],
+  "変更していない商品（元から 色→サイズ）": [
+    "7448751997166", "7461505794286", "7461516706030", "7461519098094", "7461527978222",
+    "7461535088878", "7461670289646", "7461682938094", "7461688082670", "7461695258862",
+    "7461700927726", "7461726028014", "7461871747310", "7952928473326"
+  ],
+  "色オプションなし（サイズのみ・対象外）": ["7952864739566", "7952870277358", "7952877912302"],
+  "注意": "並べ替えでバリアントの表示名だけが変わる（例: 110 / オフホワイト → オフホワイト / 110）。バリアントID・SKU・在庫は変わらない。"
+}
