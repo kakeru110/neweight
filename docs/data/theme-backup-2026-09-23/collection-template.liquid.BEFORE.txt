@@ -1,0 +1,120 @@
+{%- comment -%}
+  バックアップ: Minimal テーマ (gid://shopify/OnlineStoreTheme/129032552686 / role MAIN)
+  sections/collection-template.liquid
+  取得日時: 2026-09-23
+  用途: eosh バリアント分割ハックを除去する前の原本。戻すときはこのファイルの
+        {% schema %} 以前の部分をそのまま書き戻す（schema 以降は変更していない）。
+{%- endcomment -%}
+
+{% paginate collection.products by 20 %}
+
+<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.sort_enable }}" data-tags-enabled="{{ section.settings.tags_enable }}">
+  <div class="section-header section-header--breadcrumb">
+    {% include 'breadcrumb' %}
+  </div>
+
+  <header class="section-header section-header--large">
+    <h1 class="section-header__title{% if section.settings.tags_enable or section.settings.sort_enable %} section-header__title--left{% endif %}">{{ collection.title }}</h1>
+    {% if section.settings.tags_enable or section.settings.sort_enable %}
+    <div class="section-header__link--right">
+      {% if section.settings.tags_enable %}
+        {% include 'collection-tags' %}
+      {% endif %}
+      {% if section.settings.sort_enable %}
+        {% include 'collection-sorting' %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if collection.description != blank %}
+    <div class="rte rte--header">
+      {{ collection.description }}
+    </div>
+    <hr class="hr--clear hr--small">
+  {% endif %}
+
+  <div class="grid-uniform grid-link__container">
+
+    {% assign grid_item_width = 'wide--one-fifth large--one-quarter medium-down--one-half' %}
+    {%- assign product_width = 335 -%}
+
+    {% assign productHandles = "" | split: "," %}
+    {% assign hideVariantsIds = "" %}
+    {% assign showVariantsIds = "4369087260286242090738417902420914350655824209131280817443690803298542420912556935504209079484439843949810450670439498075670864394980759985443949807632622439498092054864394980923825442091419402478439498067806544394981002468643949810057454439498066823504369077354519842091752980718420917530134864209175304625442091753079022439498101885264394981031959843949810352366439498090088784394980904164643949809074414420914246125904394980979531043949809828078439498098608464394980697726242090780917998420907809507664382078084734242090849960174439498071738704394980720663843949807239406439498072721744394980779646243949808648430439498086811984394980871396643949806485742439498065185104394980687895843949920125166439499201579344394980943486243949809467630439498095003984394980632190243949806354670" %}
+
+    {%- for product in collection.products -%}
+        {%- for variant in product.variants -%}
+            {%- assign carousel_products = "" | split: "," -%}
+            {%- if showVariantsIds contains variant.id -%}
+                {%- assign productId = product.id -%}
+                {%- for variant in product.variants -%}
+                    {%- assign variant_id = variant.id  | split: "," -%}
+                    {%- assign carousel_products = carousel_products|concat:variant_id -%}
+                {%- endfor -%}
+                {%- assign remainingVariants =  remainingVariants | concat:carousel_products -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endfor -%}
+    {% assign hideShowVariants = remainingVariants | join:"" %}
+
+    {% for product in collection.products %}
+      {% assign featured = product %}
+    {% for variant in product.variants %}
+      {% if showVariantsIds contains variant.id %}
+                    <div class="grid__item {{grid_item_width}}">
+                        {% include "eosh-product-grid-item-variants" %}
+                    </div>
+                  {% else %}
+                    {% unless hideShowVariants contains variant.id or hideVariantsIds contains variant.id %}
+                    <div class="grid__item {{grid_item_width}}">
+                        {% include "product-grid-item" %}
+                    </div>
+                    {% break %}
+                    {% endunless %}
+                  {% endif %}
+    {% endfor %}
+    {% else %}
+
+      {% if shop.products_count == 0 %}
+        <div class="grid__item">
+          <div class="helper-section">
+            <div class="grid-uniform helper-content{% if section.settings.center_grid_link %} text-center{% endif %}">
+              {% for i in (1..8) %}
+                <div class="grid__item one-half post-large--one-quarter">
+                  <a href="/admin/products" class="grid-link">
+                    <span class="grid-link__image grid-link__image--product">
+                      <span class="grid-link__image-centered">
+                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                        {{ "product-" | append: current | placeholder_svg_tag: "placeholder-svg" }}
+                      </span>
+                    </span>
+                    <p class="grid-link__title">{{ "home_page.onboarding.product_title" | t }}</p>
+                    <p class="grid-link__meta">
+                      <strong>$19.99</strong>
+                    </p>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="grid__item">
+          <p><em>{{ "collections.general.no_matches" | t }}</em></p>
+        </div>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+  {% if paginate.pages > 1 %}
+    <hr class="hr--clear">
+
+    <div class="text-center">
+      {% include "pagination-custom" %}
+    </div>
+  {% endif %}
+</div>
+{% endpaginate %}
