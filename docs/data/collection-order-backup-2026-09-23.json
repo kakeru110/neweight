@@ -1,0 +1,306 @@
+{
+  "取得日": "2026-09-23",
+  "目的": "All Items コレクションを在庫順に並べ替える前の手動並び順のバックアップ。戻すときはこの order の順に collectionReorderProducts で position 0..n を割り当てる。",
+  "collection": {
+    "id": "gid://shopify/Collection/396971999470",
+    "handle": "all",
+    "title": "All Items",
+    "sortOrder": "MANUAL"
+  },
+  "order_before": [
+    {
+      "pos": 0,
+      "id": "9439221842158",
+      "status": "DRAFT",
+      "title": "Sumif × NOI Exclusive Order Tee"
+    },
+    {
+      "pos": 1,
+      "id": "7461727699182",
+      "status": "ACTIVE",
+      "title": "Brittany Spaniel Short Sleeve Tee(アダルト-ユニセックス)"
+    },
+    {
+      "pos": 2,
+      "id": "7461871747310",
+      "status": "ACTIVE",
+      "title": "Brittany Spaniel Short Tank Top For Dog（ドッグ）"
+    },
+    {
+      "pos": 3,
+      "id": "7461864341742",
+      "status": "ACTIVE",
+      "title": "Brittany Spaniel Short Sleeve Tee For Kids（キッズ）"
+    },
+    {
+      "pos": 4,
+      "id": "7461670289646",
+      "status": "ACTIVE",
+      "title": "RinTinTin Short Sleeve Tee（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 5,
+      "id": "7461682938094",
+      "status": "ACTIVE",
+      "title": "RinTinTin Tank Top For Dog（ドッグ）"
+    },
+    {
+      "pos": 6,
+      "id": "7461676581102",
+      "status": "ACTIVE",
+      "title": "RinTinTin Short Sleeve Tee For Kids（キッズ）"
+    },
+    {
+      "pos": 7,
+      "id": "7461721309422",
+      "status": "ACTIVE",
+      "title": "Flanders Short Sleeve Shirts（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 8,
+      "id": "7461726028014",
+      "status": "ACTIVE",
+      "title": "Flanders Shirts For Dog（ドッグ）"
+    },
+    {
+      "pos": 9,
+      "id": "7461723504878",
+      "status": "ACTIVE",
+      "title": "Flanders Short Sleeve Shirts For Kids（キッズ）"
+    },
+    {
+      "pos": 10,
+      "id": "7461535088878",
+      "status": "ACTIVE",
+      "title": "British Dogs Shirts For Dog（ドッグ）"
+    },
+    {
+      "pos": 11,
+      "id": "7461519098094",
+      "status": "ACTIVE",
+      "title": "British Dogs Long Sleeve Shirts(アダルト-ユニセックス)"
+    },
+    {
+      "pos": 12,
+      "id": "7461527978222",
+      "status": "ACTIVE",
+      "title": "British Dogs Long Sleeve Shirts For Kids（キッズ）"
+    },
+    {
+      "pos": 13,
+      "id": "7952877912302",
+      "status": "ACTIVE",
+      "title": "Various dogs Shirts For Dog（ドッグ）"
+    },
+    {
+      "pos": 14,
+      "id": "7952864739566",
+      "status": "ACTIVE",
+      "title": "Various dogs Long Sleeve Shirts(アダルト-ユニセックス)"
+    },
+    {
+      "pos": 15,
+      "id": "7952870277358",
+      "status": "ACTIVE",
+      "title": "Various dogs Long Sleeve Shirts For Kids（キッズ）"
+    },
+    {
+      "pos": 16,
+      "id": "8137457762542",
+      "status": "DRAFT",
+      "title": "Sumif×TheTENT British Dogs マルチマット"
+    },
+    {
+      "pos": 17,
+      "id": "8137457139950",
+      "status": "DRAFT",
+      "title": "British Dogs サーモボトル"
+    },
+    {
+      "pos": 18,
+      "id": "8309166538990",
+      "status": "ARCHIVED",
+      "title": "【受注生産】 Eat up your dinner Sweat"
+    },
+    {
+      "pos": 19,
+      "id": "8309171945710",
+      "status": "ARCHIVED",
+      "title": "【受注生産】 Let's Play Sweat For Dog"
+    },
+    {
+      "pos": 20,
+      "id": "8309170241774",
+      "status": "ARCHIVED",
+      "title": "【受注生産】 Let's Play  Long Sleeve Tee"
+    },
+    {
+      "pos": 21,
+      "id": "7461688082670",
+      "status": "ACTIVE",
+      "title": "Flanders Long Sleeve Tee（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 22,
+      "id": "7461700927726",
+      "status": "ACTIVE",
+      "title": "Flanders Tank Top For Dog（ドッグ）"
+    },
+    {
+      "pos": 23,
+      "id": "7461695258862",
+      "status": "ACTIVE",
+      "title": "Flanders Long Sleeve Tee For Kids（キッズ）"
+    },
+    {
+      "pos": 24,
+      "id": "7448751997166",
+      "status": "ACTIVE",
+      "title": "British Dogs Long Sleeve Tee（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 25,
+      "id": "7461505794286",
+      "status": "ACTIVE",
+      "title": "British Dogs Long Sleeve Tee For Kids（キッズ）"
+    },
+    {
+      "pos": 26,
+      "id": "7461516706030",
+      "status": "ACTIVE",
+      "title": "British Dogs Tank Top For Dog（ドッグ）"
+    },
+    {
+      "pos": 27,
+      "id": "7952919953646",
+      "status": "DRAFT",
+      "title": "Two of a kind Sweat（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 28,
+      "id": "7952946987246",
+      "status": "ACTIVE",
+      "title": "Two of a kind Sweat For Dog（ドッグ）"
+    },
+    {
+      "pos": 29,
+      "id": "7952886759662",
+      "status": "DRAFT",
+      "title": "Playing Dog Sweat（アダルト・ユニセックス）"
+    },
+    {
+      "pos": 30,
+      "id": "7952928473326",
+      "status": "ACTIVE",
+      "title": "Playing Dog Sweat For Dog（ドッグ）"
+    },
+    {
+      "pos": 31,
+      "id": "8338165596398",
+      "status": "DRAFT",
+      "title": "Sumif×The TENT Drawstring Bag 第二弾"
+    },
+    {
+      "pos": 32,
+      "id": "7880443822318",
+      "status": "DRAFT",
+      "title": "Sumif×TheTENT Flanders マルチマット"
+    },
+    {
+      "pos": 33,
+      "id": "7975371833582",
+      "status": "DRAFT",
+      "title": "Sumif×The TENT Drawstring Bag"
+    }
+  ],
+  "series_collections_unchanged": {
+    "備考": "british-dogs / rintintin / flanders / brittany-spaniel / various-dogs は既に「柄ライン単位 → 大人・キッズ・ドッグ」の順に並んでおり、在庫順の観点でも変更不要だったため触っていない。",
+    "british-dogs": [
+      "7448751997166",
+      "7461505794286",
+      "7461516706030",
+      "7461519098094",
+      "7461527978222",
+      "7461535088878",
+      "8137457139950",
+      "8137457762542"
+    ],
+    "rintintin": [
+      "7461670289646",
+      "7461676581102",
+      "7461682938094"
+    ],
+    "flanders": [
+      "7461688082670",
+      "7461695258862",
+      "7461700927726",
+      "7461721309422",
+      "7461723504878",
+      "7461726028014",
+      "7880443822318"
+    ],
+    "brittany-spaniel": [
+      "7461727699182",
+      "7461864341742",
+      "7461871747310"
+    ],
+    "various-dogs": [
+      "7952864739566",
+      "7952870277358",
+      "7952877912302"
+    ]
+  },
+  "category_collections_order_before": {
+    "備考": "adult / kids / dog も在庫順に並べ替えた。ここに載っているのが変更前の順序（DRAFT/ARCHIVED含む）。戻すときはこの順に position 0..n を割り当てる。",
+    "adult": {
+      "id": "gid://shopify/Collection/396512985326",
+      "order": [
+        "7461519098094",
+        "7952919953646",
+        "7952886759662",
+        "7952864739566",
+        "7461688082670",
+        "7448751997166",
+        "7461721309422",
+        "7461727699182",
+        "7461670289646",
+        "8309166538990",
+        "8309170241774",
+        "8309171945710",
+        "9439221842158"
+      ]
+    },
+    "kids": {
+      "id": "gid://shopify/Collection/396512952558",
+      "order": [
+        "7461695258862",
+        "7952870277358",
+        "7461527978222",
+        "7461505794286",
+        "7461723504878",
+        "7461864341742",
+        "7461676581102"
+      ]
+    },
+    "dog": {
+      "id": "gid://shopify/Collection/396512919790",
+      "order": [
+        "8137457139950",
+        "8137457762542",
+        "7461726028014",
+        "7952928473326",
+        "7952946987246",
+        "7952877912302",
+        "7461535088878",
+        "7461871747310",
+        "7461700927726",
+        "7461682938094",
+        "7461516706030",
+        "7880443822318",
+        "7975371833582",
+        "8309171945710",
+        "8338165596398"
+      ]
+    }
+  }
+}
