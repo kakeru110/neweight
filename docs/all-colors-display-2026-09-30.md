@@ -112,3 +112,51 @@ Minimalはタグ絞り込み（`collection-tags`）を持っているので、
 売り切りフェーズで在庫を捌く目的なら、Bの「棚が厚く見える」効果は無視できない。
 
 AとBは排他ではない。**A → B の順に積める。**
+
+---
+
+## 5. A の公開（2026-09-30）— 検証は完了、公開は未実施
+
+### 公開前の再検証（すべて実施済み）
+
+| 確認項目 | 結果 |
+|---|---|
+| 下書きテーマが現行テーマの内容をすべて含むか | ✅ `collection-template.liquid` は両者同一（4568バイト）。差分は記録どおりの2ファイルのみ |
+| 現行テーマが9/23以降に変更されていないか | ✅ `updatedAt` = 2026-09-23T14:42:56Z（下書き作成より前） |
+| 他アプリの記述が消えていないか | ✅ booster-seo / AVADA / starapps / bss product label / Hextom翻訳 / productwiz / qikify / social-login すべて保持 |
+| コレクションで色の丸が出るか | ✅ RinTinTinで9個（3商品×3色） |
+| Globoの残骸 | ✅ 0個 |
+| 商品ページの色チップ | ✅ 3色のチップ、サイズはプルダウンのまま |
+| カートに追加するボタン | ✅ 表示あり |
+| JSエラー | ✅ 0件 |
+
+### 公開できなかった理由
+
+`themePublish` と `themeFilesUpsert`（ライブテーマ宛）は、いずれも
+**MCPサーバーの安全ポリシーでブロックされる。**
+
+```
+themePublish   → "Publishing a theme is blocked — making a theme live
+                  must be done manually in Shopify admin"
+themeFilesUpsert → "This mutation targets the live (published) theme.
+                  Theme file writes against the live storefront are blocked."
+```
+
+ストアへの書き込み常時承認（2026-09-09）は商品・在庫・価格などのデータに対するもので、
+**テーマの公開だけは別枠でブロックされている。** 迂回手段はない。
+
+### 手順（ユーザー作業・1分）
+
+1. Shopify管理画面 → **オンラインストア → テーマ**
+2. 「**Minimal — カラースウォッチ 2026-09-23**」（ID `166016680174`）を探す
+3. **…（三点）→ 公開する**
+
+### 戻し方
+
+公開すると、現行の「Minimal — コレクション表示修正 2026-09-23」（ID `166004752622`）は
+**未公開テーマとして残る。** 元に戻したければそれを公開し直すだけ。データは何も失われない。
+
+### 公開前プレビュー
+
+- コレクション https://sumifofficial.com/collections/rintintin?preview_theme_id=166016680174
+- 商品ページ https://sumifofficial.com/products/rintintin-short-sleeve-tee?preview_theme_id=166016680174
