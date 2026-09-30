@@ -168,3 +168,31 @@ $43.00
 3. `sumif_official`（販売元）の表示を止める（`vendor_enable` を切る）
 
 3は以前から「消したい」と挙がっていた項目なので、あわせて処理するのがよい。
+
+## 6. カード下の表示を整理（2026-09-30）
+
+ユーザー指示: 提案1・2・3すべて実施。
+
+| # | 内容 | 実装 |
+|---|---|---|
+| 1 | 商品名から `（アダルト・ユニセックス）` などを省く | `card_product.title \| split: '（' \| first \| split: '(' \| first \| strip`（全角・半角の両方に対応） |
+| 2 | 色を商品名の下に別行で小さく | `<p class="sumif-card__color">`、font-size .86em / opacity .62 |
+| 3 | 販売元 `sumif_official` を出さない | `.grid-link__vendor { display: none; }`（色なし商品のカードにも効かせるためCSSで） |
+
+あわせて、**色オプションが無い商品も同じカードで描画する**ようにした。
+Various dogs 3点だけ `(アダルト-ユニセックス)` が残って表記が揃わないため。
+色行は `card_color` が空なら出さない。
+
+### 結果
+
+```
+変更前                                 変更後
+RinTinTin Short Sleeve Tee（アダル     RinTinTin Short Sleeve Tee
+ト・ユニセックス）／オフホワイト          オフホワイト
+sumif_official                        $43.00
+$43.00
+```
+
+4行 → 3行。カードの高さが揃い、グリッドが読みやすくなった。
+
+再検証: カード9枚 / 色ラベル正常 / Liquidエラー0 / JSエラー0。

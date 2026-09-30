@@ -1,0 +1,61 @@
+    {% comment %}
+      2026-09-30: 色ごとにカードを分割する。
+      - 色オプションがある商品は、購入可能な色ごとに1枚
+      - 全サイズ売り切れの色はカードを出さない（売り切りフェーズで棚を空けないため）
+      - 色オプションがない商品は従来どおり1枚
+      - バリエーションの判定はIDの完全一致で行う（2026-09-23まで入っていた旧アプリは
+        IDを区切りなしで連結した文字列に contains で部分一致させており誤爆していた）
+    {% endcomment %}
+
+    {% for product in collection.products %}
+      {%- assign ci = -1 -%}
+      {%- for opt in product.options -%}
+        {%- assign opt_lc = opt | downcase -%}
+        {%- if opt == '色' or opt == 'カラー' or opt_lc == 'color' or opt_lc == 'colour' -%}
+          {%- assign ci = forloop.index0 -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- assign color_names = '' -%}
+      {%- if ci >= 0 -%}
+        {%- for v in product.variants -%}
+          {%- assign n = v.options[ci] -%}
+          {%- if n != blank and v.available -%}
+            {%- assign wrapped = '|' | append: color_names | append: '|' -%}
+            {%- assign probe = '|' | append: n | append: '|' -%}
+            {%- unless wrapped contains probe -%}
+              {%- if color_names == '' -%}
+                {%- assign color_names = n -%}
+              {%- else -%}
+                {%- assign color_names = color_names | append: '|' | append: n -%}
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- assign color_list = color_names | split: '|' -%}
+
+      {%- if color_list.size > 0 -%}
+        {%- for c in color_list -%}
+          {%- assign card_variant = nil -%}
+          {%- for v in product.variants -%}
+            {%- if card_variant == nil and v.available and v.options[ci] == c -%}
+              {%- assign card_variant = v -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if card_variant -%}
+            <div class="grid__item {{ grid_item_width }}">
+              {%- assign card_product = product -%}
+              {%- assign card_color = c -%}
+              {% include 'sumif-color-card' %}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        <div class="grid__item {{ grid_item_width }}">
+          {% assign featured = product %}
+          {% include 'product-grid-item' %}
+        </div>
+      {%- endif -%}
+    {% else %}

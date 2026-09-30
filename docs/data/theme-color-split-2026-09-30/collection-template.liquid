@@ -1,0 +1,154 @@
+{% paginate collection.products by 20 %}
+
+<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-template" data-sort-enabled="{{ section.settings.sort_enable }}" data-tags-enabled="{{ section.settings.tags_enable }}">
+  <div class="section-header section-header--breadcrumb">
+    {% include 'breadcrumb' %}
+  </div>
+
+  <header class="section-header section-header--large">
+    <h1 class="section-header__title{% if section.settings.tags_enable or section.settings.sort_enable %} section-header__title--left{% endif %}">{{ collection.title }}</h1>
+    {% if section.settings.tags_enable or section.settings.sort_enable %}
+    <div class="section-header__link--right">
+      {% if section.settings.tags_enable %}
+        {% include 'collection-tags' %}
+      {% endif %}
+      {% if section.settings.sort_enable %}
+        {% include 'collection-sorting' %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if collection.description != blank %}
+    <div class="rte rte--header">
+      {{ collection.description }}
+    </div>
+    <hr class="hr--clear hr--small">
+  {% endif %}
+
+  <style>
+    .sumif-card__color { white-space: nowrap; opacity: .75; }
+  </style>
+
+  <div class="grid-uniform grid-link__container">
+
+    {% assign grid_item_width = 'wide--one-fifth large--one-quarter medium-down--one-half' %}
+    {%- assign product_width = 335 -%}
+
+    {% comment %}
+      2026-09-30: 色ごとにカードを分割する。
+      - 色オプションがある商品は、購入可能な色ごとに1枚
+      - 全サイズ売り切れの色はカードを出さない（売り切りフェーズで棚を空けないため）
+      - 色オプションがない商品は従来どおり1枚
+      - バリエーションの判定はIDの完全一致で行う（2026-09-23まで入っていた旧アプリは
+        IDを区切りなしで連結した文字列に contains で部分一致させており誤爆していた）
+    {% endcomment %}
+
+    {% for product in collection.products %}
+      {%- assign ci = -1 -%}
+      {%- for opt in product.options -%}
+        {%- assign opt_lc = opt | downcase -%}
+        {%- if opt == '色' or opt == 'カラー' or opt_lc == 'color' or opt_lc == 'colour' -%}
+          {%- assign ci = forloop.index0 -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- assign color_names = '' -%}
+      {%- if ci >= 0 -%}
+        {%- for v in product.variants -%}
+          {%- assign n = v.options[ci] -%}
+          {%- if n != blank and v.available -%}
+            {%- assign wrapped = '|' | append: color_names | append: '|' -%}
+            {%- assign probe = '|' | append: n | append: '|' -%}
+            {%- unless wrapped contains probe -%}
+              {%- if color_names == '' -%}
+                {%- assign color_names = n -%}
+              {%- else -%}
+                {%- assign color_names = color_names | append: '|' | append: n -%}
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- assign color_list = color_names | split: '|' -%}
+
+      {%- if color_list.size > 0 -%}
+        {%- for c in color_list -%}
+          {%- assign card_variant = nil -%}
+          {%- for v in product.variants -%}
+            {%- if card_variant == nil and v.available and v.options[ci] == c -%}
+              {%- assign card_variant = v -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if card_variant -%}
+            <div class="grid__item {{ grid_item_width }}">
+              {%- assign card_product = product -%}
+              {%- assign card_color = c -%}
+              {% include 'sumif-color-card' %}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        <div class="grid__item {{ grid_item_width }}">
+          {% assign featured = product %}
+          {% include 'product-grid-item' %}
+        </div>
+      {%- endif -%}
+    {% else %}
+
+      {% if shop.products_count == 0 %}
+        <div class="grid__item">
+          <div class="helper-section">
+            <div class="grid-uniform helper-content{% if section.settings.center_grid_link %} text-center{% endif %}">
+              {% for i in (1..8) %}
+                <div class="grid__item one-half post-large--one-quarter">
+                  <a href="/admin/products" class="grid-link">
+                    <span class="grid-link__image grid-link__image--product">
+                      <span class="grid-link__image-centered">
+                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                        {{ "product-" | append: current | placeholder_svg_tag: "placeholder-svg" }}
+                      </span>
+                    </span>
+                    <p class="grid-link__title">{{ "home_page.onboarding.product_title" | t }}</p>
+                    <p class="grid-link__meta">
+                      <strong>$19.99</strong>
+                    </p>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% else %}
+        <div class="grid__item">
+          <p><em>{{ "collections.general.no_matches" | t }}</em></p>
+        </div>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+  {% if paginate.pages > 1 %}
+    <hr class="hr--clear">
+
+    <div class="text-center">
+      {% include "pagination-custom" %}
+    </div>
+  {% endif %}
+</div>
+{% endpaginate %}
+{% schema %}
+{
+  "name": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30da\u30fc\u30b8",
+  "settings": [
+    { "type": "checkbox", "id": "vendor_enable", "label": "\u5546\u54c1\u306e\u8ca9\u58f2\u5143\u3092\u8868\u793a\u3059\u308b" },
+    { "type": "checkbox", "id": "show_sale_circle", "label": "\u5546\u54c1\u306e\u30bb\u30fc\u30eb\u3092\u4e38\u3067\u56f2\u3093\u3067\u8868\u793a\u3059\u308b" },
+    { "type": "checkbox", "id": "show_sold_out_circle", "label": "\u4e38\u3067\u56f2\u3093\u3060\u58f2\u308a\u5207\u308c\u3092\u8868\u793a\u3059\u308b" },
+    { "type": "checkbox", "id": "sort_enable", "label": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u306e\u4e26\u3079\u66ff\u3048\u3092\u6709\u52b9\u306b\u3059\u308b" },
+    { "type": "checkbox", "id": "tags_enable", "label": "\u5546\u54c1\u30bf\u30b0\u306b\u3088\u308b\u7d5e\u308a\u8fbc\u307f\u3092\u6709\u52b9\u306b\u3059\u308b" },
+    { "type": "checkbox", "id": "center_grid_link", "label": "\u5546\u54c1\u753b\u50cf\u4e0b\u306e\u30c6\u30ad\u30b9\u30c8\u3092\u4e2d\u592e\u306b\u5bc4\u305b\u308b" }
+  ]
+}
+{% endschema %}
