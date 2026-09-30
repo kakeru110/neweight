@@ -1,60 +1,47 @@
 {%- comment -%}
-  色別カード（2026-09-30 追加 / sumif）
-  collection-template.liquid から、商品×色ごとに呼ばれる。
-  期待する変数:
-    card_product : 商品
-    card_color   : 色名（文字列）
-    card_variant : その色で最初に購入可能なバリエーション
-  画像は card_variant.featured_image を使う。無ければ商品の1枚目にフォールバック。
+  色別カード（2026-09-30 / sumif）
+  期待する変数: card_product / card_color（空可） / card_variant / card_split
+  商品名は （…）以降のカテゴリー表記を落とす。色は別行に小さく出す。
+  画像は、色で2枚以上に分けているときだけ card_variant.featured_image を使う。
+  1色の商品はバリエーション画像が古い平置き写真のままのことがあるため、商品の1枚目を使う。
 {%- endcomment -%}
-
-{%- assign cc_img = card_variant.featured_image -%}
-{%- if cc_img == blank -%}{%- assign cc_img = card_product.featured_image -%}{%- endif -%}
-
+{%- if card_split -%}
+  {%- assign cc_img = card_variant.featured_image -%}
+  {%- if cc_img == blank -%}{%- assign cc_img = card_product.featured_image -%}{%- endif -%}
+{%- else -%}
+  {%- assign cc_img = card_product.featured_image -%}
+  {%- if cc_img == blank -%}{%- assign cc_img = card_variant.featured_image -%}{%- endif -%}
+{%- endif -%}
+{%- assign cc_title = card_product.title | split: '（' | first | split: '(' | first | strip -%}
 {%- assign cc_on_sale = false -%}
 {%- if card_variant.compare_at_price > card_variant.price -%}{%- assign cc_on_sale = true -%}{%- endif -%}
-
 <div>
-  <a href="{{ card_product.url }}?variant={{ card_variant.id }}"
-     class="grid-link{% if section.settings.center_grid_link %} text-center{% endif %}">
+  <a href="{{ card_product.url }}?variant={{ card_variant.id }}" class="grid-link{% if section.settings.center_grid_link %} text-center{% endif %}">
     <span class="grid-link__image grid-link__image--loading grid-link__image--product" data-image-wrapper>
       {%- if cc_on_sale and section.settings.show_sale_circle -%}
         <span class="badge badge--sale"><span class="badge__text">{{ 'products.product.sale' | t }}</span></span>
       {%- endif -%}
       <span class="grid-link__image-centered">
         {%- if cc_img != blank -%}
-          {%- capture cc_id %}ColorImage-{{ card_product.id }}-{{ card_variant.id }}{% endcapture -%}
-          {%- capture cc_wrap %}ColorImageWrapper-{{ card_product.id }}-{{ card_variant.id }}{% endcapture -%}
+          {%- capture cc_id %}ColorImage-{{ card_variant.id }}{% endcapture -%}
+          {%- capture cc_wrap %}ColorImageWrapper-{{ card_variant.id }}{% endcapture -%}
           {%- assign cc_url = cc_img | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
           {% include 'image-style' with image, image: cc_img, width: product_width, height: 480, wrapper_id: cc_wrap, img_id: cc_id %}
           <div id="{{ cc_wrap }}" class="product__img-wrapper supports-js">
             <div style="padding-top:{{ 1 | divided_by: cc_img.aspect_ratio | times: 100 }}%;">
-              <img id="{{ cc_id }}"
-                   alt="{{ cc_img.alt | escape }}"
-                   class="product__img lazyload"
-                   data-src="{{ cc_url }}"
-                   data-widths="[150, 220, 360, 470, 600, 750, 940, 1080]"
-                   data-aspectratio="{{ cc_img.aspect_ratio }}"
-                   data-sizes="auto"
-                   data-image>
+              <img id="{{ cc_id }}" alt="{{ cc_img.alt | escape }}" class="product__img lazyload" data-src="{{ cc_url }}" data-widths="[150, 220, 360, 470, 600, 750, 940, 1080]" data-aspectratio="{{ cc_img.aspect_ratio }}" data-sizes="auto" data-image>
             </div>
           </div>
-          <noscript>
-            <img src="{{ cc_img | img_url: 'large' }}" alt="{{ cc_img.alt | escape }}" class="product__img">
-          </noscript>
+          <noscript><img src="{{ cc_img | img_url: 'large' }}" alt="{{ cc_img.alt | escape }}" class="product__img"></noscript>
         {%- else -%}
           {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
       </span>
     </span>
-    <p class="grid-link__title">{{ card_product.title | escape }}<span class="sumif-card__color"> / {{ card_color | escape }}</span></p>
-    {%- if section.settings.vendor_enable -%}
-      <p class="grid-link__title grid-link__vendor">{{ card_product.vendor }}</p>
-    {%- endif -%}
+    <p class="grid-link__title">{{ cc_title | escape }}</p>
+    {%- if card_color != blank -%}<p class="sumif-card__color">{{ card_color | escape }}</p>{%- endif -%}
     <p class="grid-link__meta">
-      {%- if cc_on_sale -%}
-        <s class="grid-link__sale_price">{{ card_variant.compare_at_price | money }}</s>
-      {%- endif -%}
+      {%- if cc_on_sale -%}<s class="grid-link__sale_price">{{ card_variant.compare_at_price | money }}</s>{%- endif -%}
       {{ card_variant.price | money }}
     </p>
   </a>

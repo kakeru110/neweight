@@ -26,8 +26,23 @@
     <hr class="hr--clear hr--small">
   {% endif %}
 
+  {% comment %}
+    2026-09-30: カード下の表示を整理した。
+    ・販売元 (sumif_official) は出さない
+    ・色は商品名の下に別行。価格と同じ大きさに落とし、フォントも価格に合わせる
+      （.86em では親要素基準になり、商品名12.6pxに対して12.04pxとほぼ同じだった）
+  {% endcomment %}
   <style>
-    .sumif-card__color { white-space: nowrap; opacity: .75; }
+    .grid-link__container .grid-link__vendor { display: none; }
+    .grid-link__container .grid-link__title { margin-bottom: 0; }
+    .grid-link__container .sumif-card__color {
+      margin: 1px 0 3px;
+      font-family: inherit;
+      font-size: .75em;
+      font-weight: 400;
+      line-height: 1.35;
+      opacity: .6;
+    }
   </style>
 
   <div class="grid-uniform grid-link__container">
@@ -36,65 +51,13 @@
     {%- assign product_width = 335 -%}
 
     {% comment %}
-      2026-09-30: 色ごとにカードを分割する。
-      - 色オプションがある商品は、購入可能な色ごとに1枚
-      - 全サイズ売り切れの色はカードを出さない（売り切りフェーズで棚を空けないため）
-      - 色オプションがない商品は従来どおり1枚
-      - バリエーションの判定はIDの完全一致で行う（2026-09-23まで入っていた旧アプリは
-        IDを区切りなしで連結した文字列に contains で部分一致させており誤爆していた）
+      2026-09-30: 色ごとにカードを分割する。判定は snippets/sumif-collection-item.liquid。
+      2026-09-23まで入っていた旧アプリ (eosh) のハックは、バリアントIDを区切り文字なしで
+      連結した1本の文字列に contains で部分一致させていたため誤爆していた。今回は色名の完全一致。
     {% endcomment %}
 
     {% for product in collection.products %}
-      {%- assign ci = -1 -%}
-      {%- for opt in product.options -%}
-        {%- assign opt_lc = opt | downcase -%}
-        {%- if opt == '色' or opt == 'カラー' or opt_lc == 'color' or opt_lc == 'colour' -%}
-          {%- assign ci = forloop.index0 -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- assign color_names = '' -%}
-      {%- if ci >= 0 -%}
-        {%- for v in product.variants -%}
-          {%- assign n = v.options[ci] -%}
-          {%- if n != blank and v.available -%}
-            {%- assign wrapped = '|' | append: color_names | append: '|' -%}
-            {%- assign probe = '|' | append: n | append: '|' -%}
-            {%- unless wrapped contains probe -%}
-              {%- if color_names == '' -%}
-                {%- assign color_names = n -%}
-              {%- else -%}
-                {%- assign color_names = color_names | append: '|' | append: n -%}
-              {%- endif -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- assign color_list = color_names | split: '|' -%}
-
-      {%- if color_list.size > 0 -%}
-        {%- for c in color_list -%}
-          {%- assign card_variant = nil -%}
-          {%- for v in product.variants -%}
-            {%- if card_variant == nil and v.available and v.options[ci] == c -%}
-              {%- assign card_variant = v -%}
-            {%- endif -%}
-          {%- endfor -%}
-          {%- if card_variant -%}
-            <div class="grid__item {{ grid_item_width }}">
-              {%- assign card_product = product -%}
-              {%- assign card_color = c -%}
-              {% include 'sumif-color-card' %}
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      {%- else -%}
-        <div class="grid__item {{ grid_item_width }}">
-          {% assign featured = product %}
-          {% include 'product-grid-item' %}
-        </div>
-      {%- endif -%}
+      {% include 'sumif-collection-item' %}
     {% else %}
 
       {% if shop.products_count == 0 %}
@@ -141,14 +104,14 @@
 {% endpaginate %}
 {% schema %}
 {
-  "name": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30da\u30fc\u30b8",
+  "name": "コレクションページ",
   "settings": [
-    { "type": "checkbox", "id": "vendor_enable", "label": "\u5546\u54c1\u306e\u8ca9\u58f2\u5143\u3092\u8868\u793a\u3059\u308b" },
-    { "type": "checkbox", "id": "show_sale_circle", "label": "\u5546\u54c1\u306e\u30bb\u30fc\u30eb\u3092\u4e38\u3067\u56f2\u3093\u3067\u8868\u793a\u3059\u308b" },
-    { "type": "checkbox", "id": "show_sold_out_circle", "label": "\u4e38\u3067\u56f2\u3093\u3060\u58f2\u308a\u5207\u308c\u3092\u8868\u793a\u3059\u308b" },
-    { "type": "checkbox", "id": "sort_enable", "label": "\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u306e\u4e26\u3079\u66ff\u3048\u3092\u6709\u52b9\u306b\u3059\u308b" },
-    { "type": "checkbox", "id": "tags_enable", "label": "\u5546\u54c1\u30bf\u30b0\u306b\u3088\u308b\u7d5e\u308a\u8fbc\u307f\u3092\u6709\u52b9\u306b\u3059\u308b" },
-    { "type": "checkbox", "id": "center_grid_link", "label": "\u5546\u54c1\u753b\u50cf\u4e0b\u306e\u30c6\u30ad\u30b9\u30c8\u3092\u4e2d\u592e\u306b\u5bc4\u305b\u308b" }
+    { "type": "checkbox", "id": "vendor_enable", "label": "商品の販売元を表示する" },
+    { "type": "checkbox", "id": "show_sale_circle", "label": "商品のセールを丸で囲んで表示する" },
+    { "type": "checkbox", "id": "show_sold_out_circle", "label": "丸で囲んだ売り切れを表示する" },
+    { "type": "checkbox", "id": "sort_enable", "label": "コレクションの並べ替えを有効にする" },
+    { "type": "checkbox", "id": "tags_enable", "label": "商品タグによる絞り込みを有効にする" },
+    { "type": "checkbox", "id": "center_grid_link", "label": "商品画像下のテキストを中央に寄せる" }
   ]
 }
 {% endschema %}
