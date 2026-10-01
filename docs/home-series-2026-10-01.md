@@ -65,3 +65,83 @@ Liquidエラー0 / JSエラー0。シリーズ5枚・Another line up 4枚とも�
 見出しも英語の「Another line up」より「対象から選ぶ」等に変えたい。
 
 これは今回の依頼の範囲外なので手をつけていない。
+
+---
+
+## シリーズの中でシャツを分けた（2026-10-01）
+
+### 答えはタグ体系にあった
+
+`docs/tagging.md` の **`セット:` タグ**が、8/30の時点で「シャツを分けた組」として定義済みだった。
+実データで確認したところ、**7つとも過不足なく3点（大人・キッズ・ドッグ）**。
+
+| セットタグ | 商品数 |
+|---|---|
+| `セット:British Dogs Tee` | 3 |
+| `セット:British Dogs Shirts` | 3 |
+| `セット:Flanders Tee` | 3 |
+| `セット:Flanders Shirts` | 3 |
+| `セット:RinTinTin` | 3 |
+| `セット:Brittany Spaniel` | 3 |
+| `セット:Various dogs` | 3 |
+
+商品名の文字列マッチではなく**このタグでコレクションを組んだ**。
+タイトルが変わってもルールが壊れない。
+
+### 作ったコレクション（4件）
+
+Tシャツとシャツの両方を持つのは British Dogs と Flanders の2シリーズだけなので、新規は4件。
+RinTinTin / Brittany Spaniel / Various dogs は1種類しかないので既存をそのまま使った。
+
+| ハンドル | タイトル | ルール | 画像 |
+|---|---|---|---|
+| `british-dogs-tee` | British Dogs Tシャツ | タグ = `セット:British Dogs Tee` | 大人 オフホワイト 長袖 |
+| `british-dogs-shirts` | British Dogs シャツ | タグ = `セット:British Dogs Shirts` | 大人 オフホワイト シャツ |
+| `flanders-tee` | Flanders Tシャツ | タグ = `セット:Flanders Tee` | 大人 スミクロ 長袖 |
+| `flanders-shirts` | Flanders シャツ | タグ = `セット:Flanders Shirts` | 大人 テラコッタ シャツ |
+
+**`collectionCreate` だけでは販売チャネルに公開されない**（`resourcePublicationsV2` が空のまま）。
+そのままだと storefront で404になるため、`publishablePublish` でオンラインストアに公開した。
+今後スマートコレクションを作るときも同じ手順が要る。
+
+既存の `british-dogs` / `flanders`（シリーズ全体）はヘッダーナビが指しているので残した。
+ナビ＝シリーズ全体、タイル＝買える組、という役割分担になる。
+
+### テーマ側
+
+`sections/collection-list.liquid` は **`max_blocks: 5`** で、`case` も `when 1..5` しかなかった。
+7枚にすると `collection_item_width` が未定義になって崩れるため、
+
+- `max_blocks` を 8 に
+- `when 6`（PC3列）と `else`（PC4列）を追加
+
+に変更した。多言語ラベルは en / ja に整理（`feature-row` と同じ扱い）。
+
+### 検証
+
+| ページ | H1 | カード枚数 |
+|---|---|---|
+| `/collections/british-dogs-tee` | British Dogs Tシャツ | 5 |
+| `/collections/british-dogs-shirts` | British Dogs シャツ | 3 |
+| `/collections/flanders-tee` | Flanders Tシャツ | 9 |
+| `/collections/flanders-shirts` | Flanders シャツ | 3 |
+| `/collections/british-dogs`（ナビ） | British Dogs | 8（= 5+3） |
+| `/collections/flanders`（ナビ） | Flanders | 12（= 9+3） |
+
+分割後の合計が分割前と一致している。Liquidエラー0 / JSエラー0。
+
+タイルは PC 4+3（1枚313px）、スマホ2列。全高は PC 2,970px / スマホ 3,401px。
+
+### テーマ
+
+ドラフト **`166238814446`「Minimal — シリーズ7枚 2026-10-01」**。
+
+### 申し送り
+
+- **Playing Dog Sweat 犬 / Two of a kind Sweat 犬 の2点はどのシリーズタイルにも入らない。**
+  `セット欠品`（対になる大人用がDRAFT・在庫0）のため3点セットが成立せず、
+  タグ上もセットから外れている。トップから商品の壁を外したので、
+  いまこの2点は All Items 経由でしか辿り着けない。
+- RinTinTin / Brittany Spaniel は Tシャツのみ、Various dogs はシャツのみ。
+  タイル名を `RinTinTin Tシャツ` のように揃えることもできるが、
+  ラベルが長くなるので今回はそのままにした。

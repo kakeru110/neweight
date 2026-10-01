@@ -50,6 +50,22 @@ ACTIVE商品 **23件すべて**に適用済み。既存タグは保持し、追�
 > 「誰が描いたか」はsumifの「アートとの融合」というブランドの核そのもので、
 > SNSの型F（ブランドストーリー）にそのまま使えます。
 
+## `セット:` タグから作ったコレクション（2026-10-01 実施）
+
+トップの「シリーズから選ぶ」でシャツとTシャツを分けるため、
+Tシャツ・シャツの両方を持つ2シリーズだけコレクションを作りました。
+
+| ハンドル | タイトル | ルール |
+|---|---|---|
+| `british-dogs-tee` | British Dogs Tシャツ | タグ = `セット:British Dogs Tee` |
+| `british-dogs-shirts` | British Dogs シャツ | タグ = `セット:British Dogs Shirts` |
+| `flanders-tee` | Flanders Tシャツ | タグ = `セット:Flanders Tee` |
+| `flanders-shirts` | Flanders シャツ | タグ = `セット:Flanders Shirts` |
+
+**注意: `collectionCreate` だけでは販売チャネルに公開されません。**
+`resourcePublicationsV2` が空のままで storefront は404になります。
+`publishablePublish` でオンラインストアに公開するところまでが1セットです。
+
 ## 次に組むべきスマートコレクション（提案・未実施）
 
 タグが揃ったので、以下は自動ルールで作れます。**実行前に承認をもらってください。**
