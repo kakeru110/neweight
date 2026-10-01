@@ -1,0 +1,1056 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "enable_wide_layout": true,
+    "color_topbar_bg": "#eaeaea",
+    "color_body_bg": "#ffffff",
+    "color_footer_bg": "#ffffff",
+    "color_borders": "#000000",
+    "color_primary": "#000000",
+    "color_button_primary_text": "#ffea6c",
+    "color_topbar_text": "#000000",
+    "color_header_text": "#000000",
+    "color_body_text": "#000000",
+    "color_footer_text": "#000000",
+    "color_footer_social_link": "#000000",
+    "type_base_family": "sans-serif",
+    "type_base_size": "14px",
+    "type_header_family": "futura_n4",
+    "type_header_size": "26px",
+    "type_accent_family": "helvetica_n4",
+    "type_accent_size": "14px",
+    "type_accent_transform": false,
+    "type_accent_spacing": true,
+    "favicon": "shopify://shop_images/SUMIF_c3686cc6-2c7f-4103-a9e9-4b933fae0b6a.jpg",
+    "social_twitter_link": "https://twitter.com/sumif_official",
+    "social_facebook_link": "https://www.facebook.com/sumifofficial",
+    "social_pinterest_link": "https://www.pinterest.jp/sumif0187/",
+    "social_instagram_link": "https://www.instagram.com/sumif_official",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_sharing_style": "normal",
+    "checkout_logo_image": "shopify://shop_images/d3a17000ded5805706623998f9c8488d_c4a143dd-c8de-4e67-89c2-708b65ba8093.jpg",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#eaeaea",
+    "checkout_heading_font": "Open Sans",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#0a3db8",
+    "checkout_button_color": "#ffea6c",
+    "checkout_error_color": "#e42c00",
+    "collections_center_grid_link": false,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "header_search_enable": true,
+          "logo": "shopify://shop_images/d3a17000ded5805706623998f9c8488d_c4a143dd-c8de-4e67-89c2-708b65ba8093.jpg",
+          "logo_max_width": "90",
+          "nav_menu": "main-menu",
+          "nav_below_logo": true,
+          "left_aligned_logo": false,
+          "show_header_lines": true,
+          "show_announcement": false,
+          "header_text": "",
+          "announcement_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "menu",
+            "settings": {
+              "menu_title": "Menu",
+              "menu": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "social",
+            "settings": {}
+          },
+          "footer-3": {
+            "type": "newsletter",
+            "settings": {
+              "subtext": "<p>News Letter</p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "footer-2",
+          "footer-3"
+        ],
+        "settings": {
+          "show_methods_of_payment": true
+        }
+      },
+      "slider": {
+        "type": "slider",
+        "blocks": {
+          "slider-2": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/1_f854cec0-6655-44d4-aa57-6cda939005b3.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "6a5391bb-1af6-4be9-9562-7c91e0907056": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/sumif.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "a4c1c9cb-6ecc-4fbe-9332-6ded59fa4996": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/IMG_4634.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "0262dd79-7375-4cf5-a2f4-980477283955": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/sumif_2.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "slider-1": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/sumif_5.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "f89638bf-0618-4a0e-94a4-5ad192d58304": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image": "shopify://shop_images/sumif_ba2.jpg",
+              "alignment": "center center",
+              "overlay_opacity": 0,
+              "color_text": "#ffffff",
+              "text_alignment": "center",
+              "slide_heading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slider-2",
+          "6a5391bb-1af6-4be9-9562-7c91e0907056",
+          "a4c1c9cb-6ecc-4fbe-9332-6ded59fa4996",
+          "0262dd79-7375-4cf5-a2f4-980477283955",
+          "slider-1",
+          "f89638bf-0618-4a0e-94a4-5ad192d58304"
+        ],
+        "settings": {
+          "slider_height": "adapt",
+          "slider_autorotate": true,
+          "slider_autorotate_rate": 3,
+          "slider_home_transition": "slide",
+          "text_size": "medium"
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "custom_css": [],
+        "settings": {
+          "title": "",
+          "featured_collection": "all",
+          "num_per_row": 5,
+          "num_rows": 6,
+          "vendor_enable": true,
+          "show_sale_circle": true,
+          "show_sold_out_circle": true,
+          "center_grid_link": false
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "settings": {}
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "product_vendor_enable": true,
+          "product_quantity_enable": true,
+          "product_image_zoom_type": "no-zoom",
+          "product_thumbnails_position": "below",
+          "show_extra_tab": false,
+          "extra_tab_content": "about-us-1",
+          "social_sharing": true,
+          "enable_payment_button": true,
+          "add_to_cart_width": "large"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "vendor_enable": true,
+          "show_sale_circle": true,
+          "show_sold_out_circle": true,
+          "sort_enable": true,
+          "tags_enable": true,
+          "center_grid_link": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "article_author_enable": false,
+          "social_sharing": false
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "disabled": true,
+        "settings": {
+          "featured_product": "british-dogs-サーモボトル",
+          "product_vendor_enable": false,
+          "product_quantity_enable": true,
+          "product_image_zoom_type": "lightbox",
+          "social_sharing": false,
+          "enable_payment_button": true,
+          "add_to_cart_width": "small"
+        }
+      },
+      "featured-blog": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "News",
+          "blog": "event",
+          "post_limit": 3,
+          "blog_show_date": false,
+          "blog_show_author": false,
+          "blog_show_image": true,
+          "blog_show_excerpt": false,
+          "show_view_all": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "あなたへのおすすめ",
+          "vendor_enable": false,
+          "show_sale_circle": true,
+          "center_grid_link": false
+        }
+      },
+      "16551198722edb6d65": {
+        "type": "instagrid",
+        "disabled": true,
+        "settings": {}
+      },
+      "16555427141088a15c": {
+        "type": "rich-text",
+        "disabled": true,
+        "settings": {
+          "section_title": "Sumif は、動物愛護の活動を継続的に実施していきます。",
+          "text": "<p></p>",
+          "text_size": "small"
+        }
+      },
+      "1655543840a731f611": {
+        "type": "custom-html",
+        "disabled": true,
+        "settings": {
+          "custom_html": "<meta charset=\"UTF-8\">\n<p style=\"text-align: center;\">Sumif は、ワンコの動物保護活動を支援するため、売上げの一部を国際援助団体「ピースワンコ・ジャパン」へ寄付しています。<a href=\"https://peace-wanko.jp/\"><br><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/wnako_logo1-1_480x480.jpg?v=1655542428\" alt=\"\"></a></p>"
+        }
+      },
+      "9e214c46-d195-410c-b1bf-5bb042b050ae": {
+        "type": "custom-html",
+        "disabled": true,
+        "settings": {
+          "custom_html": "<h2><a href=\"https://sumifofficial.com/collections/all\">≫All Items</a></h2>"
+        }
+      },
+      "975b4f4b-b0a7-44dd-be65-24664baf040f": {
+        "type": "collection-list",
+        "blocks": {
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "all"
+            }
+          },
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "adult"
+            }
+          },
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "dog"
+            }
+          },
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "kids"
+            }
+          }
+        },
+        "block_order": [
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-0",
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-1",
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-2",
+          "975b4f4b-b0a7-44dd-be65-24664baf040f-1670415176a3755ae8-3"
+        ],
+        "settings": {
+          "title": "Another line up"
+        }
+      },
+      "sumif-series": {
+        "type": "collection-list",
+        "blocks": {
+          "sumif-series-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "british-dogs"
+            }
+          },
+          "sumif-series-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "rintintin"
+            }
+          },
+          "sumif-series-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "flanders"
+            }
+          },
+          "sumif-series-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "brittany-spaniel"
+            }
+          },
+          "sumif-series-4": {
+            "type": "collection",
+            "settings": {
+              "collection": "various-dogs"
+            }
+          }
+        },
+        "block_order": [
+          "sumif-series-0",
+          "sumif-series-1",
+          "sumif-series-2",
+          "sumif-series-3",
+          "sumif-series-4"
+        ],
+        "settings": {
+          "title": "シリーズから選ぶ"
+        }
+      },
+      "sumif-hero": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify://shop_images/sumif_hero_family.jpg",
+          "layout": "left",
+          "title": "大人・子ども・愛犬で、同じ絵柄を着る。",
+          "text": "<p>アーティストが描いた犬の絵柄を、大人・子ども・愛犬それぞれのサイズでつくっています。</p>",
+          "button_label": "商品を見る",
+          "button_link": "/collections/all"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": true
+        }
+      },
+      "24511976-8b6b-4a7f-a530-2deecb2e29ef": {
+        "type": "featured-collection",
+        "disabled": true,
+        "settings": {
+          "title": "Featured collection",
+          "featured_collection": "22-s-s",
+          "num_per_row": 5,
+          "num_rows": 6,
+          "vendor_enable": false,
+          "show_sale_circle": false,
+          "show_sold_out_circle": false,
+          "center_grid_link": false
+        }
+      },
+      "9859eb6c-cdd2-43a2-b5fc-e909762cd3a5": {
+        "type": "custom-html",
+        "settings": {
+          "custom_html": "<div style=\"text-align: center;\">\n<a href=\"https://sumifofficial.com/collections/all\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_1_eb44f35e-b4e2-4fc8-90a7-a7a390b2b5d0_480x480.gif?v=1673616833\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/adult\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_7_9bbd6364-e3a8-42e6-b8a0-1bf6c8702661_480x480.gif?v=1673615500\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/kids\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_2_43b1e923-74cc-47f5-a481-e339a368dcaa_480x480.gif?v=1673615123\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/dog\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_3_eda254ce-ce26-4e4d-bdbb-34cbfbb791ab_480x480.gif?v=1673615406\" alt=\"\"></a>\n</div>"
+        }
+      },
+      "24df10f7-0049-4e48-8fc2-90d1d9e5caca": {
+        "type": "custom-html",
+        "settings": {
+          "custom_html": "<div style=\"text-align: center;\">\n<a href=\"https://sumifofficial.com/collections/all\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_1_eb44f35e-b4e2-4fc8-90a7-a7a390b2b5d0_480x480.gif?v=1673616833\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/adult\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_7_9bbd6364-e3a8-42e6-b8a0-1bf6c8702661_480x480.gif?v=1673615500\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/kids\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_2_43b1e923-74cc-47f5-a481-e339a368dcaa_480x480.gif?v=1673615123\" alt=\"\"></a><a href=\"https://sumifofficial.com/collections/dog\"><img src=\"https://cdn.shopify.com/s/files/1/0603/3100/0046/files/153.240.154.10_3_eda254ce-ce26-4e4d-bdbb-34cbfbb791ab_480x480.gif?v=1673615406\" alt=\"\"></a>\n</div>"
+        }
+      }
+    },
+    "content_for_index": [
+      "sumif-hero",
+      "sumif-series",
+      "9859eb6c-cdd2-43a2-b5fc-e909762cd3a5",
+      "featured-product",
+      "9e214c46-d195-410c-b1bf-5bb042b050ae",
+      "16551198722edb6d65",
+      "975b4f4b-b0a7-44dd-be65-24664baf040f",
+      "24511976-8b6b-4a7f-a530-2deecb2e29ef",
+      "16555427141088a15c",
+      "1655543840a731f611",
+      "24df10f7-0049-4e48-8fc2-90d1d9e5caca"
+    ],
+    "blocks": {
+      "12793297677437526120": {
+        "type": "shopify://apps/content-translation/blocks/custom_translations/b5b83690-efd4-434d-8c6a-a5cef4019faf",
+        "disabled": false,
+        "settings": {}
+      },
+      "qikify-quickview-1687856412": {
+        "type": "shopify://apps/qikify-quick-view/blocks/app-embed/ce27a8e7-5292-4481-881e-08f2136a4e05",
+        "disabled": false,
+        "settings": {}
+      },
+      "3824936769257688723": {
+        "type": "shopify://apps/sami-product-labels-badges/blocks/app-embed-block/b9b44663-5d51-4be1-8104-faedd68da8c5",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "greeting_message": "👋こんにちは！ご質問やご要望がございましたら、お気軽にお問い合わせください。",
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest"
+        }
+      }
+    }
+  },
+  "presets": {
+    "Vintage": {
+      "color_topbar_bg": "#1b1e2f",
+      "color_body_bg": "#faf9f7",
+      "color_footer_bg": "#1b1e2f",
+      "color_borders": "#faf9f7",
+      "color_primary": "#d77e6a",
+      "color_button_primary_text": "#ffffff",
+      "color_topbar_text": "#ffffff",
+      "color_header_text": "#1b1e2f",
+      "color_body_text": "#1b1e2f",
+      "color_footer_text": "#f2f0ee",
+      "color_footer_social_link": "#f2f0ee",
+      "type_base_family": "helvetica_n4",
+      "type_base_size": "16px",
+      "type_header_family": "crimson_text_n7",
+      "type_header_size": "30px",
+      "type_accent_family": "pt_sans_n7",
+      "type_accent_size": "14px",
+      "type_accent_transform": true,
+      "type_accent_spacing": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_sharing_style": "normal",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Arvo",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#0081a3",
+      "checkout_button_color": "#0081a3",
+      "checkout_error_color": "#e42c00",
+      "collections_center_grid_link": false,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_search_enable": true,
+            "logo_max_width": "90",
+            "nav_below_logo": false,
+            "left_aligned_logo": true,
+            "show_header_lines": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            },
+            "footer-1": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "social",
+              "settings": {}
+            },
+            "footer-3": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2",
+            "footer-3"
+          ],
+          "settings": {
+            "show_methods_of_payment": true
+          }
+        },
+        "slider": {
+          "type": "slider",
+          "blocks": {
+            "slider-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-1": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-2": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slider-0",
+            "slider-1",
+            "slider-2"
+          ],
+          "settings": {
+            "slider_autorotate": false,
+            "slider_autorotate_rate": 5,
+            "slider_home_transition": "fade"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "title": "Popular this week",
+            "featured_collection": "frontpage",
+            "num_per_row": 4,
+            "num_rows": 2,
+            "vendor_enable": false,
+            "show_sale_circle": true,
+            "show_sold_out_circle": true,
+            "center_grid_link": false
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "settings": {}
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_vendor_enable": true,
+            "product_quantity_enable": false,
+            "product_image_zoom_type": "lightbox",
+            "product_thumbnails_position": "right",
+            "show_extra_tab": false,
+            "extra_tab_content": "",
+            "social_sharing": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "vendor_enable": true,
+            "show_sale_circle": true,
+            "show_sold_out_circle": true,
+            "sort_enable": true,
+            "tags_enable": true,
+            "center_grid_link": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "article_author_enable": false,
+            "social_sharing": false
+          }
+        },
+        "featured-product": {
+          "type": "featured-product",
+          "settings": {
+            "product_vendor_enable": false,
+            "product_quantity_enable": false,
+            "product_image_zoom_type": "lightbox",
+            "social_sharing": false
+          }
+        },
+        "featured-blog": {
+          "type": "featured-blog",
+          "settings": {
+            "title": "News",
+            "blog": "news",
+            "post_limit": 2,
+            "blog_show_date": true,
+            "blog_show_author": false,
+            "blog_show_image": false,
+            "blog_show_excerpt": true,
+            "show_view_all": false
+          }
+        }
+      },
+      "content_for_index": [
+        "slider",
+        "featured-blog",
+        "featured-collection",
+        "featured-product"
+      ]
+    },
+    "Fashion": {
+      "enable_wide_layout": true,
+      "color_body_bg": "#ffffff",
+      "color_footer_bg": "#ffffff",
+      "color_borders": "#dddddd",
+      "color_topbar_bg": "#403b37",
+      "color_topbar_text": "#ffffff",
+      "color_primary": "#f25c54",
+      "color_button_primary_text": "#ffffff",
+      "color_header_text": "#403b37",
+      "color_body_text": "#403b37",
+      "color_footer_text": "#403b37",
+      "color_footer_social_link": "#403b37",
+      "type_base_family": "pt_sans_n4",
+      "type_base_size": "16px",
+      "type_header_family": "optima_nova_n7",
+      "type_header_size": "32px",
+      "type_accent_family": "optima_nova_n4",
+      "type_accent_size": "16px",
+      "type_accent_transform": true,
+      "type_accent_spacing": true,
+      "favicon_enable": false,
+      "social_sharing_style": "normal",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#e42c00",
+      "checkout_button_color": "#e42c00",
+      "checkout_error_color": "#e42c00",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_search_enable": true,
+            "logo_max_width": "450",
+            "nav_below_logo": false,
+            "left_aligned_logo": true,
+            "show_header_lines": true
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "menu",
+              "settings": {
+                "menu_title": "Links",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            },
+            "footer-2": {
+              "type": "social",
+              "settings": {}
+            },
+            "footer-3": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2",
+            "footer-3"
+          ],
+          "settings": {
+            "show_methods_of_payment": true
+          }
+        },
+        "slider": {
+          "type": "slider",
+          "blocks": {
+            "slider-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slider-0",
+            "slider-1"
+          ],
+          "settings": {
+            "slider_autorotate": false,
+            "slider_autorotate_rate": 5,
+            "slider_home_transition": "fade"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "featured_collection": "frontpage",
+            "num_per_row": 4,
+            "num_rows": 1
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "settings": {}
+        },
+        "feature-row-0": {
+          "type": "feature-row",
+          "settings": {
+            "layout": "right"
+          }
+        },
+        "feature-row-1": {
+          "type": "feature-row",
+          "settings": {
+            "layout": "left"
+          }
+        },
+        "map": {
+          "type": "map",
+          "settings": {}
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_vendor_enable": true,
+            "product_quantity_enable": true,
+            "product_image_zoom_type": "zoom-in",
+            "product_thumbnails_position": "below",
+            "social_sharing": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "vendor_enable": true,
+            "show_sale_circle": true,
+            "show_sold_out_circle": true,
+            "sort_enable": true,
+            "tags_enable": true,
+            "center_grid_link": false
+          }
+        }
+      },
+      "content_for_index": [
+        "slider",
+        "featured-collection",
+        "feature-row-0",
+        "feature-row-1",
+        "map"
+      ]
+    },
+    "Modern": {
+      "enable_wide_layout": false,
+      "color_topbar_bg": "#cbd5cc",
+      "color_body_bg": "#ffffff",
+      "color_footer_bg": "rgba(0,0,0,0)",
+      "color_borders": "#ebebeb",
+      "color_primary": "#59756f",
+      "color_button_primary_text": "#ffffff",
+      "color_topbar_text": "#000000",
+      "color_header_text": "#000000",
+      "color_body_text": "#000000",
+      "color_footer_text": "#000000",
+      "color_footer_social_link": "#59756f",
+      "type_base_family": "pt_serif_n4",
+      "type_base_size": "17px",
+      "type_header_family": "source_sans_pro_n7",
+      "type_header_size": "32px",
+      "type_accent_family": "source_sans_pro_n7",
+      "type_accent_size": "16px",
+      "type_accent_transform": false,
+      "type_accent_spacing": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_sharing_style": "normal",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Helvetica Neue",
+      "checkout_accent_color": "#767676",
+      "checkout_button_color": "#e42c00",
+      "checkout_error_color": "#e42c00",
+      "collections_center_grid_link": false,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "header_search_enable": true,
+            "logo_max_width": "60",
+            "nav_below_logo": true,
+            "left_aligned_logo": false,
+            "show_header_lines": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "blog",
+              "settings": {
+                "blog": "news"
+              }
+            },
+            "footer-1": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer"
+              }
+            },
+            "footer-2": {
+              "type": "social",
+              "settings": {}
+            },
+            "footer-3": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2",
+            "footer-3"
+          ],
+          "settings": {
+            "show_methods_of_payment": true
+          }
+        },
+        "slider": {
+          "type": "slider",
+          "blocks": {
+            "slider-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-1": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-2": {
+              "type": "image",
+              "settings": {}
+            },
+            "slider-3": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slider-0",
+            "slider-1",
+            "slider-2",
+            "slider-3"
+          ],
+          "settings": {
+            "slider_autorotate": false,
+            "slider_autorotate_rate": 5,
+            "slider_home_transition": "fade"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_vendor_enable": true,
+            "product_quantity_enable": false,
+            "product_image_zoom_type": "lightbox",
+            "product_thumbnails_position": "right",
+            "show_extra_tab": false,
+            "extra_tab_content": "",
+            "social_sharing": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "article_author_enable": false,
+            "social_sharing": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "vendor_enable": false,
+            "show_sale_circle": true,
+            "show_sold_out_circle": true,
+            "sort_enable": true,
+            "tags_enable": true,
+            "center_grid_link": false
+          }
+        },
+        "collection-list": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-list-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "collection-list-0",
+            "collection-list-1",
+            "collection-list-2",
+            "collection-list-3"
+          ],
+          "settings": {
+            "title": "Collection list"
+          }
+        },
+        "collection-list-1": {
+          "type": "collection-list",
+          "blocks": {
+            "collection-list-1-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-1-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-1-2": {
+              "type": "collection",
+              "settings": {}
+            },
+            "collection-list-1-3": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "collection-list-1-0",
+            "collection-list-1-1",
+            "collection-list-1-2",
+            "collection-list-1-3"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "color_bg": "#eaebea"
+          }
+        }
+      },
+      "content_for_index": [
+        "slider",
+        "collection-list",
+        "collection-list-1",
+        "newsletter"
+      ]
+    }
+  }
+}
