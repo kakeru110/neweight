@@ -1,0 +1,18 @@
+{%- comment -%}
+  カード下の表示（2026-09-30 / sumif）。コレクションページとトップページで共用する。
+  ・販売元 (sumif_official) は出さない
+  ・色は商品名の下に別行。価格と同じ大きさに落とし、フォントも価格に合わせる
+    （.86em では親要素基準になり、商品名12.6pxに対して12.04pxとほぼ同じだった）
+{%- endcomment -%}
+<style>
+  .grid-link__container .grid-link__vendor { display: none; }
+  .grid-link__container .grid-link__title { margin-bottom: 0; }
+  .grid-link__container .sumif-card__color {
+    margin: 1px 0 3px;
+    font-family: inherit;
+    font-size: .75em;
+    font-weight: 400;
+    line-height: 1.35;
+    opacity: .6;
+  }
+</style>
