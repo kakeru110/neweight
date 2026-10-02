@@ -1,0 +1,129 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&family=Shippori+Mincho+B1:wght@700&family=Oswald:wght@300;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#efefef;font-family:"Noto Sans JP",sans-serif;color:#141414;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 0 40px;}
+.lab{font-size:14px;color:#b81e1e;margin:30px 0 9px;font-weight:700;}
+.card{background:#fff;}
+a{text-decoration:none;color:inherit;display:block;}
+.mi{font-family:"Noto Serif JP",serif;}
+.sh{font-family:"Shippori Mincho B1",serif;}
+.os{font-family:"Oswald",sans-serif;}
+.bb{font-family:"Bebas Neue",sans-serif;}
+
+/* E 明朝・細罫・静か */
+.e{background:#fbfaf8;border-top:1px solid #141414;border-bottom:1px solid #141414;padding:40px 24px;text-align:center;}
+.e__k{font-size:11px;letter-spacing:.55em;margin:0 0 18px;color:#8a7f72;}
+.e__h{font-size:40px;font-weight:600;letter-spacing:.1em;margin:0 0 14px;line-height:1.3;}
+.e__h span{font-size:58px;letter-spacing:.02em;}
+.e__s{font-size:12px;letter-spacing:.18em;color:#6b6b6b;margin:0;}
+
+/* F Oswald巨大数字 */
+.f{display:flex;align-items:center;gap:34px;background:#141414;color:#fff;padding:30px 44px;}
+.f__n{line-height:.84;letter-spacing:-.02em;}
+.f__n b{font-size:104px;font-weight:700;}
+.f__n i{font-style:normal;font-size:46px;font-weight:300;}
+.f__r{border-left:1px solid rgba(255,255,255,.3);padding-left:34px;}
+.f__t{font-size:20px;letter-spacing:.14em;margin:0 0 9px;font-weight:700;}
+.f__s{font-size:12.5px;letter-spacing:.1em;color:rgba(255,255,255,.66);margin:0;line-height:1.9;}
+
+/* G 写真右・明朝左 */
+.g{display:flex;background:#f4f1ec;min-height:230px;}
+.g__t{flex:1;padding:40px 44px;display:flex;flex-direction:column;justify-content:center;}
+.g__k{font-size:10.5px;letter-spacing:.5em;color:#9a8f80;margin:0 0 14px;}
+.g__h{font-size:34px;font-weight:600;letter-spacing:.08em;margin:0 0 12px;line-height:1.35;}
+.g__h span{font-size:50px;}
+.g__s{font-size:12.5px;letter-spacing:.12em;color:#6b6b6b;margin:0;line-height:2;}
+.g__i{width:300px;background:url('fam_tall.jpg') center 40% / cover no-repeat;}
+
+/* H Bebas 英字主体・白地 */
+.h{text-align:center;padding:44px 24px;background:#fff;border:1px solid #141414;}
+.h__h{font-size:76px;line-height:.92;letter-spacing:.03em;margin:0 0 6px;}
+.h__h em{font-style:normal;color:#b81e1e;}
+.h__r{height:1px;background:#141414;width:64px;margin:20px auto;}
+.h__s{font-size:12.5px;letter-spacing:.26em;margin:0;color:#444;}
+
+/* I 商品3枚＋明朝 */
+.i{display:flex;align-items:stretch;background:#fff;}
+.i__t{flex:1;padding:34px 40px;display:flex;flex-direction:column;justify-content:center;background:#f4f1ec;}
+.i__k{font-size:10.5px;letter-spacing:.5em;color:#9a8f80;margin:0 0 13px;}
+.i__h{font-size:33px;font-weight:600;letter-spacing:.07em;margin:0 0 11px;line-height:1.3;}
+.i__h span{font-size:48px;}
+.i__s{font-size:12.5px;letter-spacing:.12em;color:#6b6b6b;margin:0;}
+.i__ims{display:flex;gap:1px;}
+.i__ims span{width:146px;background-size:cover;background-position:center 32%;}
+
+/* J 極ミニマル・中央・大余白 */
+.j{text-align:center;padding:56px 24px;background:#fff;}
+.j__h{font-size:15px;letter-spacing:.7em;margin:0 0 26px;color:#141414;}
+.j__n{font-size:92px;line-height:.9;letter-spacing:.01em;margin:0 0 24px;}
+.j__n i{font-style:normal;font-size:34px;font-weight:300;letter-spacing:.1em;}
+.j__s{font-size:12px;letter-spacing:.2em;color:#777;margin:0;}
+
+@media (max-width:600px){
+ .e{padding:30px 18px;} .e__h{font-size:25px;} .e__h span{font-size:36px;}
+ .f{flex-direction:column;align-items:flex-start;gap:16px;padding:24px 22px;}
+ .f__n b{font-size:76px;} .f__n i{font-size:34px;}
+ .f__r{border-left:0;border-top:1px solid rgba(255,255,255,.3);padding-left:0;padding-top:16px;width:100%;}
+ .f__t{font-size:17px;}
+ .g{flex-direction:column;min-height:0;} .g__i{width:100%;height:190px;order:-1;}
+ .g__t{padding:26px 22px;} .g__h{font-size:24px;} .g__h span{font-size:35px;}
+ .h{padding:32px 18px;} .h__h{font-size:46px;}
+ .i{flex-direction:column;} .i__t{padding:24px 22px;} .i__h{font-size:24px;} .i__h span{font-size:35px;}
+ .i__ims{height:118px;} .i__ims span{flex:1;width:auto;}
+ .j{padding:38px 18px;} .j__n{font-size:62px;} .j__h{font-size:12px;letter-spacing:.5em;}
+}
+</style></head><body><div class="wrap">
+
+<p class="lab">案E　明朝・細罫・静か（文字だけ）</p>
+<div class="card"><a href="#"><div class="e">
+ <p class="e__k mi">SALE</p>
+ <p class="e__h mi">全商品 <span>最大50%</span> OFF</p>
+ <p class="e__s mi">再入荷の予定はありません</p>
+</div></a></div>
+
+<p class="lab">案F　数字を主役に（Oswald／黒地）</p>
+<div class="card"><a href="#"><div class="f">
+ <div class="f__n os"><b>50</b><i>%OFF</i></div>
+ <div class="f__r"><p class="f__t">全商品 最大50%OFF</p>
+ <p class="f__s">再入荷の予定はありません<br>サイズ・色がそろっているうちに</p></div>
+</div></a></div>
+
+<p class="lab">案G　左に明朝・右に家族写真</p>
+<div class="card"><a href="#"><div class="g">
+ <div class="g__t"><p class="g__k mi">SALE</p>
+ <p class="g__h mi">全商品 <span>最大50%</span> OFF</p>
+ <p class="g__s mi">再入荷の予定はありません</p></div>
+ <div class="g__i"></div>
+</div></a></div>
+
+<p class="lab">案H　英字主体（Bebas Neue／白地・枠線）</p>
+<div class="card"><a href="#"><div class="h">
+ <p class="h__h bb">UP TO <em>50% OFF</em></p>
+ <div class="h__r"></div>
+ <p class="h__s mi">全商品対象　再入荷の予定はありません</p>
+</div></a></div>
+
+<p class="lab">案I　明朝＋商品カット3枚（前回の案Bのフォント違い）</p>
+<div class="card"><a href="#"><div class="i">
+ <div class="i__t"><p class="i__k mi">SALE</p>
+ <p class="i__h mi">全商品 <span>最大50%</span> OFF</p>
+ <p class="i__s mi">再入荷の予定はありません</p></div>
+ <div class="i__ims">
+  <span style="background-image:url('p1.jpg')"></span>
+  <span style="background-image:url('p2.jpg')"></span>
+  <span style="background-image:url('p3.jpg')"></span>
+ </div>
+</div></a></div>
+
+<p class="lab">案J　極ミニマル（大余白・字間を広く）</p>
+<div class="card"><a href="#"><div class="j">
+ <p class="j__h mi">S A L E</p>
+ <p class="j__n os">50<i>% OFF</i></p>
+ <p class="j__s mi">全商品対象　再入荷の予定はありません</p>
+</div></a></div>
+
+</div></body></html>
