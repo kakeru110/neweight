@@ -101,3 +101,76 @@ Shopifyの管理プレビューバーのスクリプトが乗るため、掃除�
 5. 管理画面のコードエディタから、BSS 12本・ProductWiz 3本・
    `snippets/avada-faqs-app.liquid`・`snippets/starapps-core.liquid`・
    `templates/product.starapps.liquid`（どの商品もテンプレートサフィックス未使用、確認済み）を削除
+
+---
+
+## 追記: 有料アプリ4つの実測と解約判断
+
+「実際に何か読み込んでいるか」「画面に何か描画しているか」をPlaywrightで確認した。
+
+### 判定
+
+| アプリ | 月額 | 読み込んでいるもの | 画面への描画 | 判定 |
+|---|---|---|---|---|
+| **Sami Product Labels** | $5.00 | アプリ拡張JS **22本**＋1ページ33リクエスト | 赤い%バッジ | **解約可**（テーマ側に移植済み） |
+| **EX Show Variants** | $4.99 | **なし**（Liquidスニペットのみ） | 検索結果ページのバリエーション分割 | **解約可**（後述） |
+| **Social Login** | $2.99 | `d1pzjdztdxpvck.cloudfront.net/resource/resource.js` を全ページ | **0要素** | **解約推奨** |
+| **GO Product Page Gallery + Zoom** | $2.99 | **なし** | 商品ページの拡大はテーマ内蔵 | **解約候補** |
+
+合計 **$15.97/月 ≈ ¥2,400/月 ≈ ¥29,000/年**
+
+### 根拠
+
+**Sami Product Labels**
+`cdn.shopify.com/extensions/.../product-label-4-403/` から
+`samita.ProductLabels.bundle.*.js` を22本読み込んでいる。
+2026-10-02に `snippets/sumif-color-card.liquid` へ移植済みで、グリッド内のラベルはCSSで隠してある。
+
+**EX Show Variants (eosh)**
+JSを一切読み込まない。テーマに置かれたLiquidスニペット2本だけ。
+- `snippets/eosh-product-grid-item-variants.liquid` … **どこからも呼ばれていない**（コレクションは自作に置換済み）
+- `snippets/eosh-search-result-variants.liquid` … `templates/search.liquid` から使用中
+**純粋なLiquidなので、アンインストールしてもスニペットは残り、検索結果ページはそのまま動く。**
+
+**Social Login**
+`layout/theme.liquid` から全ページで `resource.js` を読み込んでいるが、
+`[class*=social-login]` 等の要素は商品ページ・検索結果ページとも **0個**。
+さらに `/account/login` は新しい顧客アカウント（Shopifyホスト）へ飛んでおり、
+**テーマのログインページ自体が使われていない**（リクエスト57件、cloudfrontの読み込みなし）。
+構造的に機能していない。
+
+**GO Product Page Gallery + Zoom**
+商品ページで該当する外部ホスト・アプリ拡張の読み込みが**一切見つからない**。
+商品画像の拡大は Minimal テーマ内蔵の機能（`theme.strings.zoomClose/zoomPrev/zoomNext` が
+`layout/theme.liquid` に定義されている）。停止しているか未設定の可能性が高い。
+解約後に商品画像の拡大が動くかだけ一度確認すること。
+
+### 解約の手順
+
+**スマホ（Shopifyアプリ）**
+1. 下部の「≡」→「アプリ」
+2. 対象アプリの右の「…」
+3. 「アプリを削除」→ 確認
+
+**PC（管理画面）**
+1. 「設定」→「アプリと販売チャネル」
+2. 対象アプリの「…」→「アンインストール」→ 確認
+
+**課金**
+アンインストールすれば以後の課金は止まる。
+すでに請求済みの期間ぶんが返金されるかはアプリ・プランによるので、
+確実にしたいなら次の請求日の直前に解約する。請求日は「設定」→「請求」で確認できる。
+
+### 解約後に必ずやること
+
+**アンインストールしてもテーマのコードは消えない。**
+今日見つかった ProductWiz（商品ページで159KB）と BSS Product Labels（毎ページ3リクエスト）が
+まさにその状態だった。解約したら、そのアプリのスニペット・アセットと
+`layout/theme.liquid` の include が残っていないか必ず確認する。
+
+| 解約したら消すもの | |
+|---|---|
+| Sami Product Labels | `templates/search.samitaLabelsProductsJson.liquid`／`sumif-card-style.liquid` の `.samita_productLabel-content` を隠すCSS（不要になる） |
+| EX Show Variants | `snippets/eosh-product-grid-item-variants.liquid`（未使用）。`eosh-search-result-variants.liquid` は**残す**（検索結果で使用中） |
+| Social Login | `snippets/social-login.liquid` と `layout/theme.liquid` の `{% include 'social-login' %}` |
+| GO Gallery + Zoom | テーマ内に該当ファイルなし。確認のみ |
