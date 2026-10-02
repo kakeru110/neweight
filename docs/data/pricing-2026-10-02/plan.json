@@ -1,0 +1,1358 @@
+[
+ {
+  "pid": "gid://shopify/Product/7461682938094",
+  "title": "RinTinTin Tank Top For Dog（ドッグ）",
+  "handle": "rintintin-tank-top-for-dog-ドッグ",
+  "ol": 62,
+  "sold": 0,
+  "score": 62.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091295244526",
+    "t": "オフホワイト / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655256814",
+    "t": "オフホワイト / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655289582",
+    "t": "オフホワイト / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655322350",
+    "t": "オフホワイト / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655355118",
+    "t": "スミクロ / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655387886",
+    "t": "スミクロ / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655420654",
+    "t": "スミクロ / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655453422",
+    "t": "スミクロ / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655486190",
+    "t": "ピンク / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655518958",
+    "t": "ピンク / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655551726",
+    "t": "ピンク / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362655584494",
+    "t": "ピンク / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   }
+  ],
+  "pct": 40,
+  "new": 3300,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461676581102",
+  "title": "RinTinTin Short Sleeve Tee For Kids（キッズ）",
+  "handle": "rintintin-short-sleeve-tee-for-kid",
+  "ol": 50,
+  "sold": 0,
+  "score": 50.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091274666222",
+    "t": "オフホワイト / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169774830",
+    "t": "オフホワイト / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169873134",
+    "t": "オフホワイト / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169709294",
+    "t": "スミクロ / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169807598",
+    "t": "スミクロ / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169905902",
+    "t": "スミクロ / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169742062",
+    "t": "ピンク / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169840366",
+    "t": "ピンク / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197169938670",
+    "t": "ピンク / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 5
+   }
+  ],
+  "pct": 40,
+  "new": 2400,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461505794286",
+  "title": "British Dogs Long Sleeve Tee For Kids（キッズ）",
+  "handle": "british-dogs-long-sleeve-tee-for-kid",
+  "ol": 35,
+  "sold": 0,
+  "score": 35.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090754769134",
+    "t": "オフホワイト / 110",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362587918574",
+    "t": "オフホワイト / 120",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362587951342",
+    "t": "オフホワイト / 130",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362587984110",
+    "t": "スミクロ / 110",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362588016878",
+    "t": "スミクロ / 120",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362588049646",
+    "t": "スミクロ / 130",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 1
+   }
+  ],
+  "pct": 40,
+  "new": 2700,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461864341742",
+  "title": "Brittany Spaniel Short Sleeve Tee For Kids（キッズ）",
+  "handle": "brittany-spaniel-short-sleeve-tee-for-kid",
+  "ol": 58,
+  "sold": 1,
+  "score": 29.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091752849646",
+    "t": "オフホワイト / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091752980718",
+    "t": "オフホワイト / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753111790",
+    "t": "オフホワイト / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091752882414",
+    "t": "スミクロ / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 11
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753013486",
+    "t": "スミクロ / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753144558",
+    "t": "スミクロ / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091752915182",
+    "t": "ピンク / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753046254",
+    "t": "ピンク / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753177326",
+    "t": "ピンク / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091752947950",
+    "t": "グリーン / 110",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753079022",
+    "t": "グリーン / 120",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42091753210094",
+    "t": "グリーン / 130",
+    "price": 4000,
+    "cmp": "4000",
+    "av": 1
+   }
+  ],
+  "pct": 40,
+  "new": 2400,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461695258862",
+  "title": "Flanders Long Sleeve Tee For Kids（キッズ）",
+  "handle": "flanders-long-sleeve-tee-for-kid",
+  "ol": 55,
+  "sold": 1,
+  "score": 27.5,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091337122030",
+    "t": "オフホワイト / 110",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 13
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074008302",
+    "t": "オフホワイト / 120",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074041070",
+    "t": "オフホワイト / 130",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074073838",
+    "t": "スミクロ / 110",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074106606",
+    "t": "スミクロ / 120",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074139374",
+    "t": "スミクロ / 130",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074172142",
+    "t": "ピンク / 110",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074204910",
+    "t": "ピンク / 120",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385074237678",
+    "t": "ピンク / 130",
+    "price": 4500,
+    "cmp": "4500",
+    "av": 4
+   }
+  ],
+  "pct": 40,
+  "new": 2700,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461670289646",
+  "title": "RinTinTin Short Sleeve Tee（アダルト・ユニセックス）",
+  "handle": "rintintin-short-sleeve-tee",
+  "ol": 45,
+  "sold": 2,
+  "score": 15.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091255693550",
+    "t": "オフホワイト / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362649817326",
+    "t": "オフホワイト / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 13
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362649850094",
+    "t": "スミクロ / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362649882862",
+    "t": "スミクロ / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362649915630",
+    "t": "ピンク / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 13
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362649948398",
+    "t": "ピンク / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 8
+   }
+  ],
+  "pct": 40,
+  "new": 3900,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7952946987246",
+  "title": "Two of a kind Sweat For Dog（ドッグ）",
+  "handle": "playing-dog-sweat-for-dog",
+  "ol": 64,
+  "sold": 4,
+  "score": 12.8,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/43690914906350",
+    "t": "ホワイト / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483794670",
+    "t": "ホワイト / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 13
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483860206",
+    "t": "ホワイト / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483925742",
+    "t": "ホワイト / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483761902",
+    "t": "ブラック / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483827438",
+    "t": "ブラック / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483892974",
+    "t": "ブラック / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389483958510",
+    "t": "ブラック / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   }
+  ],
+  "pct": 40,
+  "new": 3300,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461727699182",
+  "title": "Brittany Spaniel Short Sleeve Tee(アダルト-ユニセックス)",
+  "handle": "brittany-spaniel-short-sleeve-tee",
+  "ol": 80,
+  "sold": 6,
+  "score": 11.428571428571429,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091435065582",
+    "t": "オフホワイト / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520894190",
+    "t": "オフホワイト / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 14
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520795886",
+    "t": "スミクロ / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520926958",
+    "t": "スミクロ / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520828654",
+    "t": "ピンク / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520959726",
+    "t": "ピンク / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 15
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520861422",
+    "t": "グリーン / M",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48193520992494",
+    "t": "グリーン / L",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 11
+   }
+  ],
+  "pct": 40,
+  "new": 3900,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461516706030",
+  "title": "British Dogs Tank Top For Dog（ドッグ）",
+  "handle": "british-dogs-tank-top-for-dogs",
+  "ol": 57,
+  "sold": 4,
+  "score": 11.4,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090780852462",
+    "t": "オフホワイト / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090780917998",
+    "t": "オフホワイト / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090780983534",
+    "t": "オフホワイト / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090781049070",
+    "t": "オフホワイト / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090780885230",
+    "t": "スミクロ / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 9
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090780950766",
+    "t": "スミクロ / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090781016302",
+    "t": "スミクロ / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090781081838",
+    "t": "スミクロ / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   }
+  ],
+  "pct": 40,
+  "new": 3300,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461871747310",
+  "title": "Brittany Spaniel Short Tank Top For Dog（ドッグ）",
+  "handle": "brittany-spaniel-short-tank-top-for-dogs",
+  "ol": 79,
+  "sold": 6,
+  "score": 11.285714285714286,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091773100270",
+    "t": "オフホワイト / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522217710",
+    "t": "オフホワイト / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 12
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522250478",
+    "t": "オフホワイト / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 10
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522283246",
+    "t": "オフホワイト / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522316014",
+    "t": "スミクロ / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522348782",
+    "t": "スミクロ / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522381550",
+    "t": "スミクロ / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522414318",
+    "t": "スミクロ / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522447086",
+    "t": "ピンク / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522479854",
+    "t": "ピンク / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522512622",
+    "t": "ピンク / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522545390",
+    "t": "ピンク / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522578158",
+    "t": "グリーン / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522610926",
+    "t": "グリーン / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522643694",
+    "t": "グリーン / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388522676462",
+    "t": "グリーン / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   }
+  ],
+  "pct": 40,
+  "new": 3300,
+  "real": 40.0
+ },
+ {
+  "pid": "gid://shopify/Product/7448751997166",
+  "title": "British Dogs Long Sleeve Tee（アダルト・ユニセックス）",
+  "handle": "british-dogs-long-sleeve-tee",
+  "ol": 26,
+  "sold": 2,
+  "score": 8.666666666666666,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090738417902",
+    "t": "オフホワイト / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 11
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362518581486",
+    "t": "オフホワイト / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 15
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362518548718",
+    "t": "スミクロ / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362518614254",
+    "t": "スミクロ / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   }
+  ],
+  "pct": 30,
+  "new": 5200,
+  "real": 30.7
+ },
+ {
+  "pid": "gid://shopify/Product/7461700927726",
+  "title": "Flanders Tank Top For Dog（ドッグ）",
+  "handle": "flanders-tank-top-for-dogs",
+  "ol": 46,
+  "sold": 5,
+  "score": 7.666666666666667,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091355046126",
+    "t": "オフホワイト / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215434990",
+    "t": "オフホワイト / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215467758",
+    "t": "オフホワイト / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215500526",
+    "t": "オフホワイト / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215533294",
+    "t": "スミクロ / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215566062",
+    "t": "スミクロ / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215598830",
+    "t": "スミクロ / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215631598",
+    "t": "スミクロ / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215664366",
+    "t": "ピンク / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215697134",
+    "t": "ピンク / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215729902",
+    "t": "ピンク / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47385215762670",
+    "t": "ピンク / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 4
+   }
+  ],
+  "pct": 30,
+  "new": 3800,
+  "real": 30.9
+ },
+ {
+  "pid": "gid://shopify/Product/7461721309422",
+  "title": "Flanders Short Sleeve Shirts（アダルト・ユニセックス）",
+  "handle": "flanders-short-sleeve-shirt",
+  "ol": 38,
+  "sold": 4,
+  "score": 7.6,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091419402478",
+    "t": "テラコッタ / M",
+    "price": 10000,
+    "cmp": "10000",
+    "av": 14
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48180403372270",
+    "t": "テラコッタ / L",
+    "price": 10000,
+    "cmp": "10000",
+    "av": 24
+   }
+  ],
+  "pct": 30,
+  "new": 7000,
+  "real": 30.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461723504878",
+  "title": "Flanders Short Sleeve Shirts For Kids（キッズ）",
+  "handle": "flanders-short-sleeve-shirts-for-kids",
+  "ol": 14,
+  "sold": 1,
+  "score": 7.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091424579822",
+    "t": "テラコッタ / 110",
+    "price": 6000,
+    "cmp": "6000",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197165580526",
+    "t": "テラコッタ / 120",
+    "price": 6000,
+    "cmp": "6000",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/48197165613294",
+    "t": "テラコッタ / 130",
+    "price": 6000,
+    "cmp": "6000",
+    "av": 4
+   }
+  ],
+  "pct": 30,
+  "new": 4200,
+  "real": 30.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461535088878",
+  "title": "British Dogs Shirts For Dog（ドッグ）",
+  "handle": "british-dogs-shirts-for-dogs",
+  "ol": 9,
+  "sold": 1,
+  "score": 4.5,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090849927406",
+    "t": "オフホワイト / XS",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090849960174",
+    "t": "オフホワイト / S",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090849992942",
+    "t": "オフホワイト / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/42090850025710",
+    "t": "オフホワイト / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 6000,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461688082670",
+  "title": "Flanders Long Sleeve Tee（アダルト・ユニセックス）",
+  "handle": "flanders-long-sleeve-tee",
+  "ol": 14,
+  "sold": 3,
+  "score": 3.5,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091312808174",
+    "t": "オフホワイト / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47384894439662",
+    "t": "オフホワイト / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47384894472430",
+    "t": "スミクロ / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47384894505198",
+    "t": "スミクロ / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47384894537966",
+    "t": "ピンク / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 1
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47384894570734",
+    "t": "ピンク / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 10
+   }
+  ],
+  "pct": 20,
+  "new": 6000,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7952928473326",
+  "title": "Playing Dog Sweat For Dog（ドッグ）",
+  "handle": "playing-dog-sweat-for-dogs",
+  "ol": 16,
+  "sold": 4,
+  "score": 3.2,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/43690886103278",
+    "t": "グリーン / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389468950766",
+    "t": "グリーン / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 2
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389469016302",
+    "t": "グリーン / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389469081838",
+    "t": "グリーン / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389468917998",
+    "t": "ブラック / XS",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389468983534",
+    "t": "ブラック / S",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389469049070",
+    "t": "ブラック / M",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 3
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389469114606",
+    "t": "ブラック / L",
+    "price": 5500,
+    "cmp": "5500",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 4400,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461726028014",
+  "title": "Flanders Shirts For Dog（ドッグ）",
+  "handle": "flanders-shirts-for-dogs",
+  "ol": 27,
+  "sold": 9,
+  "score": 2.7,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42091430379758",
+    "t": "テラコッタ / XS",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 5
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388513894638",
+    "t": "テラコッタ / S",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 15
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388513927406",
+    "t": "テラコッタ / M",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388513960174",
+    "t": "テラコッタ / L",
+    "price": 7500,
+    "cmp": "7500",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 6000,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461527978222",
+  "title": "British Dogs Long Sleeve Shirts For Kids（キッズ）",
+  "handle": "british-dogs-long-sleeve-shirts-for-kid",
+  "ol": 14,
+  "sold": 6,
+  "score": 2.0,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090811425006",
+    "t": "オフホワイト / 110",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 6
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362645917934",
+    "t": "オフホワイト / 120",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 8
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362645950702",
+    "t": "オフホワイト / 130",
+    "price": 6500,
+    "cmp": "6500",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 5200,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7461519098094",
+  "title": "British Dogs Long Sleeve Shirts(アダルト-ユニセックス)",
+  "handle": "british-dogs-long-sleeve-shirt",
+  "ol": 11,
+  "sold": 5,
+  "score": 1.8333333333333333,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/42090794844398",
+    "t": "オフホワイト / M",
+    "price": 11000,
+    "cmp": "11000",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47362639692014",
+    "t": "オフホワイト / L",
+    "price": 11000,
+    "cmp": "11000",
+    "av": 11
+   }
+  ],
+  "pct": 20,
+  "new": 8800,
+  "real": 20.0
+ },
+ {
+  "pid": "gid://shopify/Product/7952864739566",
+  "title": "Various dogs Long Sleeve Shirts(アダルト-ユニセックス)",
+  "handle": "various-dogs-long-sleeve-shirt",
+  "ol": 12,
+  "sold": 7,
+  "score": 1.5,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/43690773545198",
+    "t": "M",
+    "price": 12100,
+    "cmp": "12100",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47388938797294",
+    "t": "L",
+    "price": 12100,
+    "cmp": "12100",
+    "av": 12
+   }
+  ],
+  "pct": 20,
+  "new": 9600,
+  "real": 20.7
+ },
+ {
+  "pid": "gid://shopify/Product/7952877912302",
+  "title": "Various dogs Shirts For Dog（ドッグ）",
+  "handle": "various-dogs-shirts-for-dog",
+  "ol": 11,
+  "sold": 7,
+  "score": 1.375,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/43690791633134",
+    "t": "XS",
+    "price": 7700,
+    "cmp": "7700",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389338075374",
+    "t": "S",
+    "price": 7700,
+    "cmp": "7700",
+    "av": 7
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389338108142",
+    "t": "M",
+    "price": 7700,
+    "cmp": "7700",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389338140910",
+    "t": "L",
+    "price": 7700,
+    "cmp": "7700",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 6100,
+  "real": 20.8
+ },
+ {
+  "pid": "gid://shopify/Product/7952870277358",
+  "title": "Various dogs Long Sleeve Shirts For Kids（キッズ）",
+  "handle": "various-dogs-long-sleeve-shirts-for-kid",
+  "ol": 4,
+  "sold": 7,
+  "score": 0.5,
+  "vs": [
+   {
+    "id": "gid://shopify/ProductVariant/43690780328174",
+    "t": "110",
+    "price": 6600,
+    "cmp": "6600",
+    "av": 0
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389262250222",
+    "t": "120",
+    "price": 6600,
+    "cmp": "6600",
+    "av": 4
+   },
+   {
+    "id": "gid://shopify/ProductVariant/47389262282990",
+    "t": "130",
+    "price": 6600,
+    "cmp": "6600",
+    "av": 0
+   }
+  ],
+  "pct": 20,
+  "new": 5200,
+  "real": 21.2
+ }
+]
