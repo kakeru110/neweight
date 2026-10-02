@@ -174,3 +174,86 @@ JSを一切読み込まない。テーマに置かれたLiquidスニペット2�
 | EX Show Variants | `snippets/eosh-product-grid-item-variants.liquid`（未使用）。`eosh-search-result-variants.liquid` は**残す**（検索結果で使用中） |
 | Social Login | `snippets/social-login.liquid` と `layout/theme.liquid` の `{% include 'social-login' %}` |
 | GO Gallery + Zoom | テーマ内に該当ファイルなし。確認のみ |
+
+---
+
+## 追記: 有料4つのアンインストール後の実測と、無料アプリの判断
+
+ユーザーが有料4つ（Sami Product Labels / EX Show Variants / Social Login /
+GO Product Page Gallery + Zoom）をアンインストール済み。
+
+### 効果（スマホ390px・JPY・js/css/xhrのみ）
+
+| ページ | 解約前 | 解約後 |
+|---|---|---|
+| トップ | 97件 / 1,052 KB | **84件 / 945 KB** |
+| コレクション | 129件 / 1,104 KB | **85件 / 942 KB** |
+| 商品ページ | 158件 / 1,312 KB | **121件 / 1,330 KB** |
+
+- Sami Product Labels は **33リクエスト → 0件**
+- テーマ製の割引率バッジは **コレクション48カード中48枚**で正常に表示。欠けなし
+- **Social Login はアンインストール後も `resource.js` を全ページで読み続けていた**
+  （`layout/theme.liquid` にスニペットが残っていたため）。下書き `166260867310` で撤去済み
+
+### いまも残っているアプリ由来の読み込み（1ページあたり）
+
+| | 件数 | 容量 |
+|---|---:|---:|
+| Google Tag | 3件 | **345 KB** |
+| Meta Pixel | 2件 | 110〜202 KB |
+| qikify Quick View | 1件 | 98 KB |
+| Hextom 翻訳 | 2件 | 72 KB |
+| BSS（残骸） | 3件 | 0 KB ← 下書きで撤去済み |
+| Social Login（残骸） | 1件 | 0 KB ← 下書きで撤去済み |
+| GLO Color Swatch | 1件 | 0 KB |
+| POWR Image Slider | 1件 | 0 KB |
+| TikTok / Pinterest 計測 | 5〜7件 | 0 KB |
+
+### 無料アプリ 20個の判断
+
+**残す（止めると業務が止まる・ストアフロントに読み込みゼロ）**
+
+| アプリ | 理由 |
+|---|---|
+| OPENLOGI | 物流。出荷が止まる |
+| NP後払い配送伝票番号登録アプリ | 決済 |
+| かんたん会計freee売上データ連携 | 会計 |
+| Shopify Claude Connector App | このセッションの接続元 |
+| Flow | Shopify公式。自動化 |
+| Order Printer (legacy) | Shopify公式。納品書 |
+| Messaging | 問い合わせ受信 |
+| Translate & Adapt | Shopify公式・無料。翻訳はこれ1本に寄せる |
+
+**残す（先に消すとSEOが壊れる）**
+
+| BOOSTER SEO |
+|---|
+| **これだけは先に消さないこと。** `layout/theme.liquid` のテーマ本来の `<title>` と `<meta name="description">` はコメントアウトされたままで、**いまタイトルと説明文を出しているのはこのアプリ**。アンインストールすると全ページのタイトルと説明文が消える。JSもネットワークリクエストも0件なのでストアフロントの負荷はほぼゼロ。外すなら、先にコメントを解除し、Shopify側のSEO欄に文言を移してから。theme.liquid に注意書きを残した |
+
+**消す（ストアフロントを重くしているだけ）**
+
+| アプリ | 理由 |
+|---|---|
+| Hextom: Translate and Currency | 72KB/ページ。翻訳が4重 |
+| T Lab - AI Language Translate | 翻訳が4重 |
+| ATranslate: Native Translate | 翻訳が4重。`NATIVE_TRANSLATE_CDN_THEME` という未公開テーマまで残している |
+| GLO Color Swatch | 色チップは2026-09-23に自作へ置換済み |
+| POWR Image Slider | ヒーローを feature-row に替えたので未使用 |
+| Page Speed Booster | アプリ20個の状態で速度改善アプリを足すのは本末転倒 |
+| GetSale Discounts | 値引きは価格の直接変更で実施済み。未使用 |
+
+**要確認（こちらからは判断できない）**
+
+| アプリ | 確認すること |
+|---|---|
+| **Sellbrite** | Amazon/eBay等とのマルチチャネル在庫連携。**使っているなら絶対に消さない。** OpenLogiと二重に在庫を書き換えると在庫事故になる。他チャネルで売っていないなら消す |
+| qikify Quick View | 98KB/ページ。カードの虫眼鏡。カラー分割カードで色が直接選べるので価値は下がった。好みで判断 |
+| Trusted FAQ | FAQページを出しているなら残す。ストアフロントの読み込みには出てこなかった |
+| WB:Multi Converter | 用途不明。読み込みなし。心当たりがなければ消す |
+
+### アプリではないが一番重い
+
+Google Tag **345KB** ＋ Meta Pixel 110〜202KB ＋ TikTok ＋ Pinterest
+＝ **1ページの重量の半分近く**。広告を回していないなら、測定のためだけに毎ページ450KB以上払っている。
+これは「設定 → 販売チャネル・アプリ」ではなく各チャネル／カスタムピクセル側の設定。
+広告の予定がないなら外す価値がある。**ユーザーの判断待ち。**
