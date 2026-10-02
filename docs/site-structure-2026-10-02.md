@@ -138,3 +138,89 @@ Toby & Linus も Saint Rue も、トップは **5〜8セクション**で終わ�
 - SAINT RUE — https://www.saintrue.com
 - foufouBRANDS — https://foufoubrands.com/
 - Everlane — https://www.everlane.com
+
+---
+
+## 実施記録 2026-10-02（①②③すべて実行）
+
+### ② ナビ — 実施済み・公開中
+
+`menuUpdate` で10項目 → **7項目**に組み替え。メニューはストア側設定なので即反映。
+
+```
+SALE / 大人 / 子ども / 愛犬 / シリーズ▾（9） / Sumifについて▾（6） / ガイド▾（4）
+```
+
+- `大人` `子ども` `愛犬` の中身を事前確認: **ACTIVE 7 / 7 / 9点**で正しかった
+  （コレクションの表示点数は下書き・アーカイブを含むため13/7/15と出ていた）
+- `シリーズ▾` にトップと同じ9シリーズを入れ、ナビとトップの不一致を解消
+- `News`（2022年で停止）をナビから外した
+- `Styling Book` 3ページを「（大人）（子ども）（愛犬）」と区別して全部出した
+- 変更前の構成は `docs/data/sale-banner-2026-10-02/main-menu-before.md`
+
+### ① トップページ — 下書き `166269616366` に実装
+
+```
+ヒーロー → セール告知帯 → シリーズから選ぶ(9) →
+大人・子ども・愛犬から選ぶ(3) → ピースワンコへの寄付
+```
+
+| やったこと | |
+|---|---|
+| GIFバナー2本を無効化 | `9859eb6c…` と `24df10f7…`。同一内容が2回出ていた |
+| 「Another line up」を作り替え | タイトルを「大人・子ども・愛犬から選ぶ」に、4枚（all/adult/dog/kids）→ **3枚（大人・子ども・愛犬）** に |
+| ピースワンコのセクションを復活 | 無効化されていた `1655543840a731f611` を有効化 |
+| 無効化したセクションは残した | テーマ編集画面から戻せるよう `content_for_index` には残し `disabled: true` にした |
+| 無効セクションの参照先を修正 | `24511976…` が削除予定の `22-s-s` を参照していたので `all` に変更 |
+
+検証: ナビ7項目、セクション5本、タイル12枚（9＋3）、**GIF画像0枚**、
+Liquidエラー・JSエラーなし、ページ高3,350px。
+
+### ③ コレクション — 25 → 16。実施済み・公開中
+
+**削除した9件**（`collectionDelete`）
+
+| コレクション | リダイレクト先 |
+|---|---|
+| アダルト用 | `/collections/adult` |
+| キッズ用 | `/collections/kids` |
+| 愛犬用ウェア | `/collections/dog` |
+| New | `/collections/all` |
+| 22 S/S | `/collections/all` |
+| TOP | `/collections/all` |
+| Sumif | `/collections/all` |
+| Shirt | `/collections/all` |
+| T-shirt | `/collections/all` |
+
+**9件すべてに `urlRedirectCreate` でリダイレクトを設定し、実機で転送を確認した。**
+削除前の商品割り当ては `docs/data/collections-2026-10-02/deleted-collections.md` に保存。
+
+残した16件: `ホームページ`（Shopify標準・テーマが参照する可能性があるため温存）/
+`All Items` / `Adult` / `Kids` / `Dog` / 柄5つ / セット6つ
+
+## 残った不整合（要判断）
+
+### コレクション名が英語のまま
+
+ナビを日本語（`大人` `子ども` `愛犬`）にしたが、**コレクション自体の名前は
+`Adult` `Kids` `Dog` のまま**なので、クリックした先のページ見出しが英語になる。
+トップのタイルも `Adult` と表示される（その下の小さい行は日本語）。
+
+選択肢:
+- **A**: コレクション名を `大人` `子ども` `愛犬` に変更する（ページ見出しもタイルも日本語で揃う）
+- **B**: ナビを英語に戻す（`Adult` `Kids` `Dog`）
+
+サイト全体が `All Items` `About Sumif` など英語寄りなので、**どちらが正かはブランド判断。未着手。**
+
+### FAQ リンク
+
+`ガイド▾ > FAQ` は `/apps/frequently-asked-questions?faq-section-id=75051&faq-article-id=338099` のまま。
+HTTP 200 は返るが本文が1,128字しかなく、**AVADA HelpCenter FAQs（解約済み）の
+残骸で中身が出ていない可能性が高い。** いま入っている Trusted FAQ 側のURLに貼り替えるか、
+リンクを外すか要確認。
+
+### その他（未着手）
+
+- `Animal Donation` と `ピースワンコ` のページ統合
+- `/pages/test` → `/pages/artist` のハンドル変更（リダイレクト必須）
+- `News` ブログの記事が2022年6月で停止したまま
