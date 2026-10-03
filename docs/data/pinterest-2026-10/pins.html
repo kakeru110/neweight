@@ -1,0 +1,133 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;background:#777;color:#1a1a1a}
+/* Pinterest推奨 2:3 = 1000x1500 */
+.pin{width:1000px;height:1500px;background:#fff;position:relative;overflow:hidden;margin-bottom:24px}
+.pm{position:absolute;left:0;right:0;bottom:30px;text-align:center;font-size:19px;
+    letter-spacing:.3em;font-weight:700;color:#9a9a9a}
+.band{position:absolute;left:0;right:0;bottom:0;background:#fff;padding:44px 56px 86px}
+.band h2{font-family:"Noto Serif JP",serif;font-size:50px;font-weight:600;line-height:1.38}
+.band p{font-size:24px;line-height:1.75;color:#666;margin-top:20px}
+.kick{position:absolute;left:0;right:0;top:0;background:#fff;padding:52px 56px 34px;text-align:center}
+.kick .k{font-size:19px;letter-spacing:.26em;color:#9a9a9a;font-weight:700}
+.kick h2{font-family:"Noto Serif JP",serif;font-size:52px;font-weight:600;line-height:1.36;margin-top:20px}
+.kick p{font-size:23px;line-height:1.7;color:#666;margin-top:16px}
+img{display:block}
+
+/* 1 コラージュ */
+.c1{position:absolute;left:0;top:0;width:1000px;height:1250px;overflow:hidden}
+.c1 img{width:100%;height:100%;object-fit:cover;object-position:center top}
+
+/* 3 犬種グリッド */
+.g4{position:absolute;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.g4 .c{position:relative;overflow:hidden;height:420px}
+.g4 .c img{width:100%;height:100%;object-fit:cover}
+.g4 .c span{position:absolute;left:0;bottom:0;background:#fff;padding:11px 17px;
+  font-size:21px;font-weight:700;letter-spacing:.06em;line-height:1}
+
+/* 4 フルブリード写真 */
+.full{position:absolute;inset:0}
+.full img{width:100%;height:100%;object-fit:cover}
+
+/* 2 サイズ表 */
+.tbl{position:absolute;left:56px;right:56px;top:430px}
+.tbl table{border-collapse:collapse;width:100%;font-size:33px}
+.tbl th,.tbl td{text-align:left;padding:25px 0;border-bottom:1px solid #ececec;font-variant-numeric:tabular-nums}
+.tbl thead th{font-size:19px;letter-spacing:.16em;color:#9a9a9a;border-bottom:2px solid #1a1a1a;padding-bottom:15px}
+.tbl tbody td:first-child{font-weight:700;width:150px}
+.tbl tbody tr:last-child td{border-bottom:2px solid #1a1a1a}
+.tbl .note{font-size:22px;line-height:1.8;color:#666;margin-top:38px}
+.strip{position:absolute;left:0;right:0;bottom:70px;height:330px;overflow:hidden}
+.strip img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
+</style></head><body>
+
+<!-- 1 おそろい -->
+<div class="pin" id="pin1">
+  <div class="c1"><img src="collage-britishdogs-plain.jpg"></div>
+  <div class="band">
+    <h2>親子と愛犬で、<br>同じ絵柄を着る。</h2>
+    <p>大人・子ども・愛犬で同じ絵柄がそろうシリーズ。<br>それぞれ別売りです。</p>
+  </div>
+  <div class="pm">SUMIF</div>
+</div>
+
+<!-- 2 犬服のサイズ -->
+<div class="pin" id="pin2">
+  <div class="kick">
+    <div class="k">DOG SIZE GUIDE</div>
+    <h2>犬服のサイズ、<br>どう選ぶ？</h2>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>サイズ</th><th>体重の目安</th></tr></thead>
+      <tbody>
+        <tr><td>XS</td><td>3 〜 4 kg</td></tr>
+        <tr><td>S</td><td>4 〜 5 kg</td></tr>
+        <tr><td>M</td><td>5 〜 8 kg</td></tr>
+        <tr><td>L</td><td>8 〜 12 kg</td></tr>
+      </tbody>
+    </table>
+    <div class="note">体重が同じでも胴の長さは子によって違います。<br>
+    首回り・着丈・胴周りの実寸でも確かめてください。</div>
+  </div>
+  <div class="strip"><img src="bd_d_sumi.jpg"></div>
+  <div class="pm">SUMIF</div>
+</div>
+
+<!-- 3 犬種 -->
+<div class="pin" id="pin3">
+  <div class="kick">
+    <div class="k">ALL SHAPES</div>
+    <h2>どの子にも、<br>似合うだろうか。</h2>
+    <p>体型の違う子が同じ服を着ています。</p>
+  </div>
+  <div class="g4" style="top:390px">
+    <div class="c"><img src="br_yorkie.jpg" style="object-position:center 22%"><span>ヨークシャーテリア</span></div>
+    <div class="c"><img src="br_chihuahua.jpg" style="object-position:center 22%"><span>チワワ</span></div>
+    <div class="c"><img src="br_poodle.jpg" style="object-position:center 20%"><span>プードル</span></div>
+    <div class="c"><img src="br_boston.jpg" style="object-position:center 22%"><span>ボストンテリア</span></div>
+  </div>
+  <div class="pm">SUMIF</div>
+</div>
+
+<!-- 4 家族写真 -->
+<div class="pin" id="pin4">
+  <div class="full"><img src="bds_fam.jpg" style="object-position:center 18%"></div>
+  <div class="band" style="padding-bottom:86px">
+    <h2>家族写真を撮る日、<br>服がばらばらで締まらない。</h2>
+    <p>そんな日のために作りました。</p>
+  </div>
+  <div class="pm">SUMIF</div>
+</div>
+
+<!-- 5 プリント -->
+<div class="pin" id="pin5">
+  <div class="c1" style="height:1180px"><img src="bd_print.jpg" style="object-position:center 46%"></div>
+  <div class="band">
+    <h2>イギリスの犬たちを、<br>一頭ずつ描いた柄。</h2>
+    <p>ジャックラッセルテリア／ボルゾイ／ポインター／<br>
+    ワイヤーフォックステリア／ビーグル</p>
+  </div>
+  <div class="pm">SUMIF</div>
+</div>
+
+<!-- 6 シリーズ -->
+<div class="pin" id="pin6">
+  <div class="kick">
+    <div class="k">SERIES</div>
+    <h2>絵柄で選ぶ。</h2>
+    <p>作家が描いた犬の絵を、Tシャツとシャツに。</p>
+  </div>
+  <div class="g4" style="top:380px">
+    <div class="c" style="height:480px"><img src="bd_a_ow_w.jpg" style="object-position:58% 12%"><span>British Dogs</span></div>
+    <div class="c" style="height:480px"><img src="rt_a_pink.jpg" style="object-position:center 12%"><span>RinTinTin</span></div>
+    <div class="c" style="height:480px"><img src="fl_a.jpg" style="object-position:center 12%"><span>Flanders</span></div>
+    <div class="c" style="height:480px"><img src="adult_pink.jpg" style="object-position:center 12%"><span>Brittany Spaniel</span></div>
+  </div>
+  <div class="pm">SUMIF</div>
+</div>
+
+</body></html>
