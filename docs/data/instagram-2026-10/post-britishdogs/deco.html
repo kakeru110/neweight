@@ -1,0 +1,200 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;background:#999}
+.v{width:1080px;height:1350px;background:#fff;position:relative;overflow:hidden;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:537px 537px;gap:6px;position:absolute;inset:0}
+.grid.band{bottom:150px}
+.p{position:relative;overflow:hidden}
+.p img{width:100%;height:100%;object-fit:cover;display:block}
+.pa{grid-row:1/3}
+/* --- ラベル --- */
+.lab{position:absolute;left:0;bottom:0;background:#fff;padding:14px 22px 13px;
+     font-size:27px;font-weight:700;letter-spacing:.18em;line-height:1}
+.lab .pr{display:block;margin-top:12px;font-size:25px;font-weight:500;letter-spacing:.02em;
+     font-variant-numeric:tabular-nums}
+.lab .pr s{color:#9a9a9a;margin-right:9px;font-weight:400}
+.lab .pr b{font-weight:700}
+/* --- 赤バッジ --- */
+.bdg{position:absolute;right:0;top:0;background:#e8313a;color:#fff;
+     padding:11px 18px;font-size:27px;font-weight:700;letter-spacing:.02em;line-height:1}
+/* --- 下帯 --- */
+.strip{position:absolute;left:0;right:0;bottom:0;height:150px;background:#fff;
+       display:flex;align-items:center;justify-content:space-between;padding:0 46px}
+.strip .ser{font-family:"Noto Serif JP",serif;font-size:36px;font-weight:600;letter-spacing:.02em}
+.strip .ser small{display:block;font-family:"Noto Sans JP";font-size:21px;font-weight:400;
+       letter-spacing:.14em;color:#9a9a9a;margin-top:10px}
+.strip .off{text-align:right;font-size:25px;letter-spacing:.04em;line-height:1.5}
+.strip .off b{display:block;font-family:"Noto Serif JP",serif;font-size:42px;font-weight:600}
+.strip .off b em{font-style:normal;color:#e8313a}
+/* --- コーナーの小さい文字 --- */
+.corner{position:absolute;left:34px;bottom:34px;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.45);
+        font-size:25px;letter-spacing:.1em;line-height:1.6}
+.corner b{display:block;font-family:"Noto Serif JP",serif;font-size:38px;font-weight:600;letter-spacing:.02em;margin-bottom:8px}
+</style></head><body>
+
+<!-- A: 誰が着ているかのラベルだけ -->
+<div class="v" id="vA">
+  <div class="grid">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%"><span class="lab">大人</span></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%"><span class="lab">子ども</span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 14%"><span class="lab">愛犬</span></div>
+  </div>
+</div>
+
+<!-- B: ラベル + 価格 -->
+<div class="v" id="vB">
+  <div class="grid">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥6,500</s><b>¥3,250</b></span></span></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%">
+      <span class="lab">子ども<span class="pr"><s>¥4,000</s><b>¥2,400</b></span></span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 14%">
+      <span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,025</b></span></span></div>
+  </div>
+</div>
+
+<!-- C: ラベル + 赤バッジ -->
+<div class="v" id="vC">
+  <div class="grid">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%">
+      <span class="bdg">50%OFF</span><span class="lab">大人<span class="pr"><s>¥6,500</s><b>¥3,250</b></span></span></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%">
+      <span class="bdg">40%OFF</span><span class="lab">子ども<span class="pr"><s>¥4,000</s><b>¥2,400</b></span></span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 14%">
+      <span class="bdg">45%OFF</span><span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,025</b></span></span></div>
+  </div>
+</div>
+
+<!-- D: 写真はそのまま、下に帯 -->
+<div class="v" id="vD">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%"></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%"></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 14%"></div>
+  </div>
+  <div class="strip">
+    <div class="ser">Brittany Spaniel<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<!-- E: 大人のパネルに白文字を直接 -->
+<div class="v" id="vE">
+  <div class="grid">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%">
+      <div class="corner"><b>同じ絵柄で、3つのサイズ</b>Brittany Spaniel　10月31日まで</div></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%"><span class="lab">子ども</span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 14%"><span class="lab">愛犬</span></div>
+  </div>
+</div>
+
+
+<!-- F: ラベル+価格 + 下帯 -->
+<div class="v" id="vF">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥6,500</s><b>¥3,250</b></span></span></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%">
+      <span class="lab">子ども<span class="pr"><s>¥4,000</s><b>¥2,400</b></span></span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 20%">
+      <span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,025</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">Brittany Spaniel<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<!-- G: F + 赤バッジ（大人は左上に逃がす） -->
+<div class="v" id="vG">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="adult_pink.jpg" style="object-position:center 12%">
+      <span class="bdg" style="right:auto;left:0">50%OFF</span>
+      <span class="lab">大人<span class="pr"><s>¥6,500</s><b>¥3,250</b></span></span></div>
+    <div class="p"><img src="kids.jpg" style="object-position:center 10%">
+      <span class="bdg">40%OFF</span>
+      <span class="lab">子ども<span class="pr"><s>¥4,000</s><b>¥2,400</b></span></span></div>
+    <div class="p"><img src="dog_xs.jpg" style="object-position:center 20%">
+      <span class="bdg">45%OFF</span>
+      <span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,025</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">Brittany Spaniel<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<!-- BD: British Dogs 長袖 -->
+<div class="v" id="vBD">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="bd_a_ow_w.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥7,500</s><b>¥4,875</b></span></span></div>
+    <div class="p"><img src="bd_k_sumi.jpg" style="object-position:center 10%">
+      <span class="lab">子ども<span class="pr"><s>¥4,500</s><b>¥2,700</b></span></span></div>
+    <div class="p"><img src="bd_d_sumi.jpg" style="object-position:center 26%">
+      <span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,300</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">British Dogs<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>35〜<em>45%</em>OFF</b></div>
+  </div>
+</div>
+
+<div class="v" id="vRT">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="rt_a_pink.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥6,500</s><b>¥3,250</b></span></span></div>
+    <div class="p"><img src="rt_k_ow.jpg" style="object-position:center 10%">
+      <span class="lab">子ども<span class="pr"><s>¥4,000</s><b>¥2,200</b></span></span></div>
+    <div class="p"><img src="rt_d_sumi.jpg" style="object-position:center 26%">
+      <span class="lab">愛犬<span class="pr"><s>¥5,500</s><b>¥3,300</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">RinTinTin<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<div class="v" id="vFLS">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="fl_a.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥10,000</s><b>¥7,000</b></span></span></div>
+    <div class="p"><img src="fl_k.jpg" style="object-position:center 10%">
+      <span class="lab">子ども<span class="pr"><s>¥6,000</s><b>¥4,200</b></span></span></div>
+    <div class="p"><img src="fl_d.jpg" style="object-position:center 22%">
+      <span class="lab">愛犬<span class="pr"><s>¥7,500</s><b>¥6,000</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">Flanders シャツ<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<div class="v" id="vBDS">
+  <div class="grid band" style="grid-template-rows:597px 597px">
+    <div class="p pa"><img src="bds_a.jpg" style="object-position:center 12%">
+      <span class="lab">大人<span class="pr"><s>¥11,000</s><b>¥8,800</b></span></span></div>
+    <div class="p"><img src="bds_k.jpg" style="object-position:center 8%">
+      <span class="lab">子ども<span class="pr"><s>¥6,500</s><b>¥5,200</b></span></span></div>
+    <div class="p"><img src="bds_d.jpg" style="object-position:center 20%">
+      <span class="lab">愛犬<span class="pr"><s>¥7,500</s><b>¥6,000</b></span></span></div>
+  </div>
+  <div class="strip">
+    <div class="ser">British Dogs シャツ<small>大人・子ども・愛犬</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+
+<div class="v" id="vBDSFAM">
+  <div style="position:absolute;left:0;right:0;top:0;bottom:150px;overflow:hidden">
+    <img src="bds_fam.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 32%">
+  </div>
+  <div class="strip">
+    <div class="ser">British Dogs シャツ<small>大人 ¥8,800　子ども ¥5,200　愛犬 ¥6,000</small></div>
+    <div class="off">10月31日まで<b>最大<em>50%</em>OFF</b></div>
+  </div>
+</div>
+</body></html>
