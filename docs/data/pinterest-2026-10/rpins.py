@@ -9,7 +9,7 @@ async def main():
         pg=await (await b.new_context(viewport={'width':1040,'height':1560})).new_page()
         await pg.goto(f"file://{SP}/pins.html", wait_until='networkidle', timeout=60000)
         await pg.wait_for_timeout(2500)
-        for i in range(1,7):
+        for i in range(1,9):
             await (await pg.query_selector(f"#pin{i}")).screenshot(path=f"{SP}/pin-{i}.png")
         print("ok"); await b.close()
 asyncio.run(main())
