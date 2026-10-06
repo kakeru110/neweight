@@ -19,10 +19,28 @@ body{font-family:"Noto Sans JP",sans-serif;background:#999;color:#1a1a1a}
 .brand.d{color:#1a1a1a;text-shadow:none}
 
 /* 1枚目コラージュ */
-.grid{display:grid;grid-template-rows:repeat(3,1fr);gap:6px;position:absolute;inset:0 0 230px 0}
-.p{position:relative;overflow:hidden}
-.p img{width:100%;height:100%;object-fit:cover;display:block}
-.pa{grid-row:1/3}
+/* 縦長(0.83)の写真を4:5の枠で分割すると服が切れるため、
+   1枚目だけは contain で全身を入れる。白ホリ撮影なので背景は白のまま馴染む。 */
+.hd1{position:absolute;left:0;right:0;top:0;padding:78px 56px 0;text-align:center}
+.hd1 .bk{font-size:19px;letter-spacing:.26em;color:#9a9a9a;font-weight:700}
+.hd1 h2{font-family:"Noto Serif JP",serif;font-size:54px;font-weight:600;line-height:1.3;margin-top:22px}
+.hd1 p{font-size:23px;line-height:1.7;color:#666;margin-top:16px}
+.grid{position:absolute;inset:360px 0 150px 0;display:grid;grid-template-columns:1fr 1fr;
+      gap:12px;align-items:start;padding:0 24px}
+.ft1{position:absolute;left:0;right:0;bottom:0;height:150px;padding:0 46px;
+     display:flex;align-items:center;justify-content:space-between;border-top:2px solid #1a1a1a;
+     margin:0 46px;width:calc(100% - 92px)}
+.ft1 .a{font-size:25px;letter-spacing:.03em}
+.ft1 .a b{font-family:"Noto Serif JP",serif;font-size:34px;color:#e8313a}
+.ft1 .b{font-size:19px;letter-spacing:.24em;font-weight:700}
+.p{position:relative}
+.p img{width:100%;height:auto;object-fit:contain;display:block}
+.p .lb{margin-top:16px;padding:0 6px}
+.p .lb b{display:block;font-size:24px;font-weight:700;letter-spacing:.02em}
+.p .lb small{display:block;font-size:19px;color:#9a9a9a;margin-top:6px}
+.p .lb .pr{display:block;margin-top:10px;font-size:21px;font-variant-numeric:tabular-nums}
+.p .lb .pr s{color:#b0b0b0;margin-right:8px}
+.p .lb .pr em{font-style:normal;color:#e8313a;font-weight:700;font-size:26px}
 .cap{position:absolute;left:0;right:0;bottom:0;height:230px;padding:36px 46px}
 .cap h2{font-family:"Noto Serif JP",serif;font-size:50px;font-weight:600;line-height:1.3}
 .cap p{font-size:23px;line-height:1.7;color:#666;margin-top:14px}
@@ -56,15 +74,22 @@ body{font-family:"Noto Sans JP",sans-serif;background:#999;color:#1a1a1a}
 
 <!-- 1 表紙 -->
 <div class="v" id="s1">
-  <div class="grid">
-    <div class="p"><img src="br_chihuahua.jpg" style="object-position:center 34%"></div>
-    <div class="p"><img src="br_poodle.jpg" style="object-position:center 32%"></div>
-    <div class="p"><img src="br_boston.jpg" style="object-position:center 34%"></div>
-  </div>
-  <div class="brand d" style="right:46px;top:auto;bottom:172px">SUMIF</div>
-  <div class="cap">
+  <div class="hd1">
+    <div class="bk">DOG SWEAT</div>
     <h2>寒くなる前に、<br>うちの子の一枚。</h2>
     <p>愛犬用スウェット　2柄・綿100%　／　XS〜L</p>
+  </div>
+  <div class="grid">
+    <div class="p"><img src="br_chihuahua.jpg">
+      <div class="lb"><b>Two of a kind</b><small>ホワイト</small>
+      <span class="pr"><s>¥5,500</s><em>¥3,025</em></span></div></div>
+    <div class="p"><img src="pd_b_side.jpg">
+      <div class="lb"><b>Playing Dog</b><small>ブラック</small>
+      <span class="pr"><s>¥5,500</s><em>¥4,400</em></span></div></div>
+  </div>
+  <div class="ft1">
+    <div class="a">最大<b>45%</b>OFF　10月31日まで</div>
+    <div class="b">SUMIF</div>
   </div>
 </div>
 
