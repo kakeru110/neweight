@@ -1,0 +1,134 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;background:#999;color:#1a1a1a}
+.v{width:1080px;height:1350px;background:#fff;position:relative;overflow:hidden;margin-bottom:20px}
+.ph{position:absolute;inset:0 0 150px 0;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.strip{position:absolute;left:0;right:0;bottom:0;height:150px;background:#fff;
+       display:flex;align-items:center;justify-content:space-between;padding:0 46px}
+.strip .l{font-size:27px;font-weight:700;letter-spacing:.04em}
+.strip .l small{display:block;font-size:20px;font-weight:400;color:#9a9a9a;margin-top:9px;letter-spacing:.06em}
+.strip .r{text-align:right;font-size:24px;font-variant-numeric:tabular-nums}
+.strip .r s{color:#9a9a9a;margin-right:10px}
+.strip .r b{font-size:33px;font-family:"Noto Serif JP",serif;color:#e8313a}
+.strip .r em{display:block;font-style:normal;font-size:20px;color:#9a9a9a;margin-top:7px}
+.brand{position:absolute;right:28px;top:24px;color:#fff;font-size:19px;letter-spacing:.24em;font-weight:700;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.brand.d{color:#1a1a1a;text-shadow:none}
+
+/* 1枚目コラージュ */
+.grid{display:grid;grid-template-rows:repeat(3,1fr);gap:6px;position:absolute;inset:0 0 230px 0}
+.p{position:relative;overflow:hidden}
+.p img{width:100%;height:100%;object-fit:cover;display:block}
+.pa{grid-row:1/3}
+.cap{position:absolute;left:0;right:0;bottom:0;height:230px;padding:36px 46px}
+.cap h2{font-family:"Noto Serif JP",serif;font-size:50px;font-weight:600;line-height:1.3}
+.cap p{font-size:23px;line-height:1.7;color:#666;margin-top:14px}
+
+/* サイズ */
+.sz{padding:84px 72px 0}
+.sz .k{font-size:20px;letter-spacing:.22em;font-weight:700;color:#9a9a9a;margin-bottom:18px}
+.sz h1{font-family:"Noto Serif JP",serif;font-size:52px;font-weight:600;line-height:1.35}
+.sz table{border-collapse:collapse;margin-top:52px;font-size:33px;width:100%}
+.sz th,.sz td{text-align:left;padding:25px 0;border-bottom:1px solid #ececec;font-variant-numeric:tabular-nums}
+.sz thead th{font-size:19px;letter-spacing:.14em;color:#9a9a9a;border-bottom:2px solid #1a1a1a;padding-bottom:14px}
+.sz tbody td:first-child{font-weight:700;width:170px}
+.sz tbody tr:last-child td{border-bottom:2px solid #1a1a1a}
+.sz p{font-size:23px;line-height:1.8;color:#555;margin-top:44px}
+
+/* まとめ */
+.sum{padding:88px 72px;display:flex;flex-direction:column;height:100%}
+.sum .k{font-size:20px;letter-spacing:.22em;font-weight:700;color:#9a9a9a;margin-bottom:18px}
+.sum h1{font-family:"Noto Serif JP",serif;font-size:50px;font-weight:600;line-height:1.35}
+.sum .big{font-family:"Noto Serif JP",serif;font-size:76px;font-weight:600;margin-top:40px;line-height:1.1}
+.sum .big em{font-style:normal;color:#e8313a}
+.sum .date{font-size:30px;margin-top:18px;letter-spacing:.04em}
+.sum table{border-collapse:collapse;margin-top:44px;font-size:25px;width:100%}
+.sum th,.sum td{text-align:left;padding:17px 0;border-bottom:1px solid #ececec;font-variant-numeric:tabular-nums}
+.sum thead th{font-size:17px;letter-spacing:.14em;color:#9a9a9a;border-bottom:2px solid #1a1a1a;padding-bottom:12px}
+.sum tbody td:first-child{font-weight:700}
+.sum tbody td.pr b{color:#e8313a}
+.sum tbody tr:last-child td{border-bottom:2px solid #1a1a1a}
+.sum .ft{margin-top:auto;font-size:23px;line-height:1.85;color:#555}
+</style></head><body>
+
+<!-- 1 表紙 -->
+<div class="v" id="s1">
+  <div class="grid">
+    <div class="p"><img src="br_chihuahua.jpg" style="object-position:center 34%"></div>
+    <div class="p"><img src="br_poodle.jpg" style="object-position:center 32%"></div>
+    <div class="p"><img src="br_boston.jpg" style="object-position:center 34%"></div>
+  </div>
+  <div class="brand d" style="right:46px;top:auto;bottom:172px">SUMIF</div>
+  <div class="cap">
+    <h2>寒くなる前に、<br>うちの子の一枚。</h2>
+    <p>愛犬用スウェット　2柄・綿100%　／　XS〜L</p>
+  </div>
+</div>
+
+<!-- 2 Two of a kind ホワイト -->
+<div class="v" id="s2">
+  <div class="ph"><img src="br_chihuahua.jpg" style="object-position:center 22%"></div>
+  <div class="brand d">SUMIF</div>
+  <div class="strip"><div class="l">Two of a kind<small>スウェット　ホワイト　XS・S・M・L</small></div>
+    <div class="r"><s>¥5,500</s><b>¥3,025</b><em>45%OFF</em></div></div>
+</div>
+
+<!-- 3 Two of a kind ブラック -->
+<div class="v" id="s3">
+  <div class="ph"><img src="br_poodle.jpg" style="object-position:center 20%"></div>
+  <div class="brand d">SUMIF</div>
+  <div class="strip"><div class="l">Two of a kind<small>スウェット　ブラック　XS・S・M・L</small></div>
+    <div class="r"><s>¥5,500</s><b>¥3,300</b><em>40%OFF</em></div></div>
+</div>
+
+<!-- 4 Playing Dog -->
+<div class="v" id="s4">
+  <div class="ph"><img src="br_boston.jpg" style="object-position:center 24%"></div>
+  <div class="brand d">SUMIF</div>
+  <div class="strip"><div class="l">Playing Dog<small>スウェット　ブラック　XS・S・M</small></div>
+    <div class="r"><s>¥5,500</s><b>¥4,400</b><em>残りわずか</em></div></div>
+</div>
+
+<!-- 5 サイズ -->
+<div class="v" id="s5">
+  <div class="sz">
+    <div class="k">SIZE</div>
+    <h1>サイズは体重が目安です。</h1>
+    <table>
+      <thead><tr><th>サイズ</th><th>体重の目安</th></tr></thead>
+      <tbody>
+        <tr><td>XS</td><td>3 〜 4 kg</td></tr>
+        <tr><td>S</td><td>4 〜 5 kg</td></tr>
+        <tr><td>M</td><td>5 〜 8 kg</td></tr>
+        <tr><td>L</td><td>8 〜 12 kg</td></tr>
+      </tbody>
+    </table>
+    <p>体重が同じでも胴の長さは子によって違います。<br>
+    着丈と胴周りの実寸は、各商品ページに載せています。</p>
+  </div>
+</div>
+
+<!-- 6 まとめ -->
+<div class="v" id="s6">
+  <div class="sum">
+    <div class="k">DOG SWEAT</div>
+    <h1>愛犬用のスウェット、<br>2柄あります。</h1>
+    <div class="big">最大<em>45%</em>OFF</div>
+    <div class="date">10月31日まで</div>
+    <table>
+      <thead><tr><th>柄・色</th><th>価格</th></tr></thead>
+      <tbody>
+        <tr><td>Two of a kind ホワイト</td><td class="pr"><s>¥5,500</s> <b>¥3,025</b></td></tr>
+        <tr><td>Two of a kind ブラック</td><td class="pr"><s>¥5,500</s> <b>¥3,300</b></td></tr>
+        <tr><td>Playing Dog ブラック</td><td class="pr"><s>¥5,500</s> <b>¥4,400</b></td></tr>
+      </tbody>
+    </table>
+    <div class="ft">この2型は<strong>愛犬用のみ</strong>です。大人用・子ども用はありません。<br>
+    ¥8,000以上で送料無料。追加の生産はしていません。</div>
+  </div>
+</div>
+
+</body></html>
